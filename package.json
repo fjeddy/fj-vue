@@ -1,0 +1,9 @@
+{
+  "name": "framework",
+  "version": "0.0.1",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.0-beta1",
+    "vue-affix": "^0.5.2"
+  }
+}
