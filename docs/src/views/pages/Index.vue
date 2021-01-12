@@ -1,41 +1,99 @@
 <template>
   <div>
 
-    <f-button value="This is a button of some kind" class="btn-primary" />
+    <section>
+      <h1>Framework.vue</h1>
+      <p class="lead">A VueJS framework aimed towards JSON API's with a certain
+      JSON structure.</p>
 
-    <f-pagination />
+      <p>If you are the creator of a JSON API, and are also the maker of a frontend,
+        then this framework might be for you. Framework.vue aims at making the
+        frontend creation and maintaince process much simpler by handling responses
+        from the API such as lists, forms and so on.</p>
 
-    <f-list url="https://api.elytra.no/v1/players" :limit="2" v-slot="{ item }">
-      {{ item.name }}
-    </f-list>
+      <p>The framework will, if given the data in the correct format, generate the
+        necessary HTML for you. Increasing the developement time drastically.</p>
+    </section>
 
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <section>
+      <h2>Bootstrap</h2>
+      <p>Bootstrap is included by default in this framework, tho, only CSS included,
+        and only a few subset files. Bootstrap as a whole is not included.</p>
 
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <pre>@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
 
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
 
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/utilities/api";
+      </pre>
+    </section>
 
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <section>
+      <h2>Installing the entire framework</h2>
+      <p>It's possible, but not recommended, to install the entire framework
+        at once in Vue. This will include every component within the framework
+        and make them globally available.</p>
 
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <strong>main.js</strong>
+      <f-code :value="`import Vue from 'vue'
+import Framework from 'f-vue'
 
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+import App from './App.vue'
 
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+Vue.use(Framework)
+
+new Vue({
+  render: h => h(App)
+}).$mount('#app')`" />
+    </section>
+
+    <section>
+      <h2>By component</h2>
+      <p>Loading the components you need in the components you use them in
+      is the recommended way of using this framework. Assuming you lazyload
+      the routes itself, then you just load the subset of the framework you need.</p>
+
+      <strong>MyRoute.vue</strong>
+      <f-code :value="`<template>
+  <f-list>
+    My list item here
+  </f-list>
+</template>
+
+<script>
+import { FList } from 'f-vue'
+
+export default {
+  components: {
+    FList
+  }
+}
+</script>`" />
+    </section>
 
   </div>
 </template>
 
 <script>
-import { FButton, FPagination, FList } from 'framework'
+import { FCode } from 'framework'
 
 export default {
   components: {
-    FButton,
-    FPagination,
-    FList
+    FCode
   }
 }
 </script>

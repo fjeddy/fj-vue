@@ -6,6 +6,7 @@ import FFooter from './layout/Footer.vue'
 import FLink from './components/Link.vue'
 import FButton from './components/Button.vue'
 import FPagination from './components/Pagination.vue'
+import FCode from './components/Code.vue'
 
 import FLoading from './components/Loading.vue'
 
@@ -22,6 +23,7 @@ export default {
     Vue.component(FLink)
     Vue.component(FButton)
     Vue.component(FPagination)
+    Vue.component(FCode)
 
     Vue.component(FLoading)
 
@@ -39,6 +41,7 @@ export {
   FLink,
   FButton,
   FPagination,
+  FCode,
 
   FLoading,
 

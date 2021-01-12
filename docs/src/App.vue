@@ -2,7 +2,13 @@
   <div id="app" class="d-flex flex-column h-100">
 
     <f-navbar :data="this.$route.meta.navbar" class="navbar-light bg-light">
-      Enter navbar content here
+      <router-link to="/" class="navbar-brand">
+        Framework.vue
+      </router-link>
+
+      <router-link to="/" v-if="this.$route.path != '/'">
+        &lt;- Go back home
+      </router-link>
     </f-navbar>
 
     <f-header :data="this.$route.meta.header" class="py-5 bg-dark text-white">

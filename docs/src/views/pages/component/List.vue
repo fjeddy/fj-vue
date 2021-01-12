@@ -46,12 +46,14 @@ export default {
       // Enter your item HTML here, the item data is contained within the
       // 'item' object
       -->
-      
+
     </f-list>
   </div>
 </template>
 
 <script>
+// import { FList } from 'f-vue'
+
 module.exports = {
   components: {
     FList
