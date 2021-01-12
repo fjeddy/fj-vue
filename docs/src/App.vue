@@ -35,8 +35,4 @@ export default {
 
 <style lang="scss">
 @import "@/sass/style.scss";
-
-a {
-  text-decoration: none;
-}
 </style>

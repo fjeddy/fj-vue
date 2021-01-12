@@ -6,13 +6,7 @@
       <h2>List</h2>
       <p class="lead">Loop through and print an array of items.</p>
 
-      <code>
-        f-list
-          url=""
-          :limit="10"
-          v-slot="{ item }">
-        /f-list
-      </code>
+      <vuep :value="code" :scope="scope" />
 
     </section>
 
@@ -30,9 +24,38 @@
 </template>
 
 <script>
+/*eslint-disable no-useless-escape */
 import { FList } from 'framework'
 
 export default {
+  data: function() {
+    return {
+      scope: { FList },
+      code: `
+<template>
+  <div>
+    <f-list
+      url="https://api.elytra.no/v1/players"
+      :limit="2"
+      v-slot="{ item }">
+
+      {{ item.name }}
+
+    </f-list>
+  </div>
+</template>
+
+<script>
+module.exports = {
+  components: {
+    FList
+  }
+}
+<\/script>
+      `
+    }
+  },
+
   components: {
     FList
   }
