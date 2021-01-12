@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-md-3 f-sidebar">
-        <affix relative-element-selector=".f-sidebar" v-if="isSidebar">
+      <div class="col-md-3 f-sidebar" v-if="isSidebar">
+        <affix relative-element-selector=".f-sidebar">
           <router-view name="sidebar"></router-view>
         </affix>
       </div>
