@@ -36,11 +36,17 @@ export default {
   <div>
     <f-list
       url="https://api.elytra.no/v1/players"
-      :limit="2"
-      v-slot="{ item }">
+      v-slot="{ item }"
+
+      :limit="10">
 
       {{ item.name }}
 
+      <!--
+      // Enter your item HTML here, the item data is contained within the
+      // 'item' object
+      -->
+      
     </f-list>
   </div>
 </template>
