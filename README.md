@@ -8,5 +8,12 @@ This is a personal project, made to simplify my life. Feel free to use it, if yo
 ## Documentation & demo
 All the documentation can be found at [framework.fjeddy.com](https://framework.fjeddy.com/). The demo is written and made solely using this framework. The same docs can be found in the `docs/` folder in this repo.
 
+## Included dependencies
+This framework depends on certain other modules to simplify the integration process.
+
+* [Bootstrap v5 (Certain submodules, css only)](https://github.com/twbs/bootstrap)
+* [Axios](https://github.com/axios/axios)
+* [vue-affix](https://github.com/eddiemf/vue-affix)
+
 ## License
 MIT
