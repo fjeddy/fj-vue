@@ -3,21 +3,19 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+import core from '@/router/core'
+import components from '@/router/components'
+import layout from '@/router/layout'
+
 const routes = [
+  ...core,
+  ...components,
+  ...layout,
+
   {
-    path: '/',
-    name: 'Home',
-    components: {
-      default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/Index.vue'),
-      header: () => import(/* webpackChunkName: "header-whatever" */ '@/views/headers/Index.vue'),
-      sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
-    },
-    meta: {
-      title: "Welcome",
-      navbar: {
-        class: "py-5"
-      }
-    }
+    path: '*',
+    name: '404',
+    component: () => import('@/views/pages/404.vue')
   }
 ]
 

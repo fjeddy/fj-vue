@@ -1,5 +1,5 @@
 <template>
   <div>
-    Header
+    404
   </div>
 </template>
