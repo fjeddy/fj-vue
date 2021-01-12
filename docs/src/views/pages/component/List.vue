@@ -27,6 +27,11 @@
       <p>The response the API should give for the component to work properly.</p>
 
       <f-code :value="api" />
+
+      <p><span class="text-danger">*</span> Every key in <code>options</code>
+        can be omitted, the framework will remove the GUI if the option
+        is missing. <strong>Ex:</strong> If you don't provide the <code>options.page</code>
+        in the API response, then the pagination will not be displayed.</p>
     </section>
 
   </div>
@@ -71,7 +76,11 @@ export default {
 <\/script>`,
       api: `{
   "options": {
-    "limit": 15,
+    "limit": {
+      "current": 15,
+      "min": 1,
+      "max": 50
+    },
     "page": {
       "current": 1,
       "total": 23
