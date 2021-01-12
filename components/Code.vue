@@ -29,8 +29,5 @@ export default {
 </script>
 
 <style lang="scss">
-.CodeMirror {
-  border: 1px solid #eee!important;
-  height: auto!important;
-}
+
 </style>
