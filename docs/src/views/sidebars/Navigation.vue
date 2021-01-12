@@ -1,32 +1,32 @@
 <template>
   <div>
 
-    <h5>Layouts</h5>
-    <ul>
+    <router-link to="/">
+      - Home
+    </router-link>
+
+    <h5 class="mt-5">Layouts</h5>
+    <ul class="list-unstyled">
       <li><router-link to="/layout/header">
-        Header
+        With a header
       </router-link></li>
 
-      <li><router-link to="/list">
-        Sidebar
+      <li><router-link to="/layout/no-sidebar">
+        No sidebar
       </router-link></li>
 
-      <li><router-link to="/list">
+      <li><router-link to="/layout/header-sidebar">
         Header & Sidebar
       </router-link></li>
 
-      <li><router-link to="/list">
+      <li><router-link to="/layout/centered">
         Centered content
       </router-link></li>
     </ul>
 
-    <h5>Components</h5>
-    <ul>
-      <li><router-link to="/">
-        Overview
-      </router-link></li>
-
-      <li><router-link to="/list">
+    <h5 class="mt-5">Components</h5>
+    <ul class="list-unstyled">
+      <li><router-link to="/component/list">
         List
       </router-link></li>
     </ul>

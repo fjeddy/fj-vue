@@ -1,9 +1,9 @@
 module.exports = [
   {
-    path: '/list',
+    path: '/component/list',
     name: 'List',
     components: {
-      default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/List.vue'),
+      default: () => import(/* webpackChunkName: "page-component-list" */ '@/views/pages/component/List.vue'),
       sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
     },
     meta: {
