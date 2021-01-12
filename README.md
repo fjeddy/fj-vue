@@ -15,5 +15,9 @@ This framework depends on certain other modules to simplify the integration proc
 * [Axios](https://github.com/axios/axios)
 * [vue-affix](https://github.com/eddiemf/vue-affix)
 
+Most components are lazyloaded, so no module will actually be included if you
+don't use a module in the framework that use one of the dependencies. This of course
+depends on the fact that you yourself lazyload modules from this framework.
+
 ## License
 MIT
