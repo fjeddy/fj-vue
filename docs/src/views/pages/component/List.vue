@@ -2,22 +2,31 @@
   <div>
 
     <section>
-
-      <h2>List</h2>
-      <p class="lead">Loop through and print an array of items.</p>
-
-      <vuep :value="code" :scope="scope" />
-
+      <h1>List</h1>
+      <p class="lead">Loop through an array of data and handle sorting, pagination
+      and output automatically.</p>
     </section>
 
-    <section class="mt-5">
-
-      <h3>Example</h3>
-
+    <section class="bg-light p-1 rounded">
       <f-list url="https://api.elytra.no/v1/players" :limit="2" v-slot="{ item }">
-        {{ item.name }}
+        <div class="bg-dark p-2 text-white rounded">
+          {{ item.name }}
+        </div>
       </f-list>
+    </section>
 
+    <section>
+      <h2>Vue example</h2>
+      <p>An example of how the component can be implemented in Vue</p>
+
+      <f-code :value="code" />
+    </section>
+
+    <section>
+      <h2>API response</h2>
+      <p>The response the API should give for the component to work properly.</p>
+
+      <f-code :value="api" />
     </section>
 
   </div>
@@ -25,14 +34,12 @@
 
 <script>
 /*eslint-disable no-useless-escape */
-import { FList } from 'framework'
+import { FList, FCode } from 'framework'
 
 export default {
   data: function() {
     return {
-      scope: { FList },
-      code: `
-<template>
+      code: `<template>
   <div>
     <f-list
       url="https://api.elytra.no/v1/players"
@@ -40,7 +47,9 @@ export default {
 
       :limit="10">
 
-      {{ item.name }}
+      <div class="bg-dark p-2 text-white">
+        {{ item.name }}
+      </div>
 
       <!--
       // Enter your item HTML here, the item data is contained within the
@@ -52,20 +61,45 @@ export default {
 </template>
 
 <script>
-// import { FList } from 'f-vue'
+import { FList } from 'f-vue'
 
-module.exports = {
+export default {
   components: {
     FList
   }
 }
-<\/script>
-      `
+<\/script>`,
+      api: `{
+  "options": {
+    "limit": 15,
+    "page": {
+      "current": 1,
+      "total": 23
+    },
+    "order": {
+      "current": "name",
+      "direction": "asc",
+      "options": []
+    }
+  },
+  "items": {
+    "total": 129,
+    "list": [
+      {
+        "name": "item 1"
+      },
+      {
+        "name": "item 2 "
+      }
+    ]
+  }
+}`
     }
   },
 
   components: {
-    FList
+    FList,
+    FCode
   }
 }
 </script>

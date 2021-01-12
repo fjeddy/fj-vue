@@ -2,7 +2,7 @@
   <div>
 
     <ul class="list-unstyled">
-      <li><router-link to="/">
+      <li><router-link to="/app">
         App.vue
       </router-link></li>
     </ul>

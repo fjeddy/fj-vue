@@ -8,7 +8,7 @@
         </affix>
       </div>
 
-      <div class="col">
+      <div class="col-md-9">
         <slot></slot>
       </div>
 
