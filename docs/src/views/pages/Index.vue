@@ -9,10 +9,28 @@
       <p>If you are the creator of a JSON API, and are also the maker of a frontend,
         then this framework might be for you. Framework.vue aims at making the
         frontend creation and maintaince process much simpler by handling responses
-        from the API such as lists, forms and so on.</p>
+        from a JSON API such as lists, forms and so on.</p>
 
       <p>The framework will, if given the data in the correct format, generate the
-        necessary HTML for you. Increasing the developement time drastically.</p>
+        necessary HTML for you. Increasing the developement time drastically.
+        By conforming to a specific standard when creating the API, then half the
+        job is already done on the frontend.</p>
+
+      <p><strong>Important:</strong> This project is made to simplify my life and
+      is used in most project where we also make the backend APIs. It does not
+      intend to solve any world problems or cover a specific problem, it's simply
+      here to make my life easier.</p>
+
+      <h5 class="mt-4">Functionality over size</h5>
+      <p>Size is important, as in, the smaller the better. But functionality is
+      even more important. This framework will try to keep things as tight as
+      possible, but will not sacrifice simplicity and functionality for a smaller
+      build.</p>
+
+      <p>The goal is a total size of &lt; 400kb for the framework on initial load
+      (Global CSS and JS). Which should leave a production site, with your custom
+      layout and css at &lt; 500kb, lazyloading the actual components within your
+      production site.</p>
     </section>
 
     <section>
