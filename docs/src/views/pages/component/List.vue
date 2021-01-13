@@ -8,7 +8,7 @@
     </section>
 
     <section class="bg-light p-1 rounded">
-      <f-list url="https://api.elytra.no/v1/players" :limit="2" v-slot="{ item }">
+      <f-list url="https://api.elytra.no/v1/players" :limit="5" v-slot="{ item }">
         <div class="bg-dark p-2 text-white rounded">
           {{ item.name }}
         </div>
@@ -79,7 +79,8 @@ export default {
     "limit": {
       "current": 15,
       "min": 1,
-      "max": 50
+      "max": 50,
+      "options": []
     },
     "page": {
       "current": 1,

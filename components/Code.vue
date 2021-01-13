@@ -1,5 +1,5 @@
 <template>
-  <vue-code-highlight :language="language">
+  <vue-code-highlight :language="language" class="f-code">
     <slot>{{ value }}</slot>
   </vue-code-highlight>
 </template>
@@ -27,3 +27,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.f-code pre {
+  border-radius: 3px;
+}
+</style>
