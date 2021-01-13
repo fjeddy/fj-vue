@@ -16,6 +16,16 @@
     </section>
 
     <section>
+      <f-tabs>
+        <div class="f-tab" id="vue" default>
+          Tab 1
+        </div>
+
+        <div class="f-tab" id="api">
+          Tab 2
+        </div>
+      </f-tabs>
+
       <h2>Vue example</h2>
       <p>An example of how the component can be implemented in Vue</p>
 

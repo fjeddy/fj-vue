@@ -26,11 +26,19 @@
       <li><router-link to="/component/list">
         List
       </router-link></li>
+
+      <li><router-link to="/component/tabs">
+        Tabs
+      </router-link></li>
     </ul>
 
     <ul class="list-unstyled">
       <li><router-link to="/component/code">
         Code
+      </router-link></li>
+
+      <li><router-link to="/component/pagination">
+        Pagination
       </router-link></li>
     </ul>
 

@@ -12,6 +12,8 @@ import FLoading from './components/Loading.vue'
 
 import FFormSelect from './components/form/Select.vue'
 
+import FTabs from './components/Tabs.vue'
+
 import FList from './components/List.vue'
 
 export default {
@@ -30,6 +32,8 @@ export default {
     Vue.component(FLoading)
 
     Vue.component(FFormSelect)
+
+    Vue.component(FTabs)
 
     Vue.component(FList)
 
@@ -50,6 +54,8 @@ export {
   FLoading,
 
   FFormSelect,
+
+  FTabs,
 
   FList
 }
