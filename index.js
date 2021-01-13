@@ -10,6 +10,8 @@ import FCode from './components/Code.vue'
 
 import FLoading from './components/Loading.vue'
 
+import FFormSelect from './components/form/Select.vue'
+
 import FList from './components/List.vue'
 
 export default {
@@ -26,6 +28,8 @@ export default {
     Vue.component(FCode)
 
     Vue.component(FLoading)
+
+    Vue.component(FFormSelect)
 
     Vue.component(FList)
 
@@ -44,6 +48,8 @@ export {
   FCode,
 
   FLoading,
+
+  FFormSelect,
 
   FList
 }

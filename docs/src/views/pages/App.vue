@@ -17,9 +17,9 @@
 
 <script>
 /*eslint-disable no-useless-escape */
-import { FCode } from 'framework'
-
 export default {
+  name: "PageApp",
+  
   data: function() {
     return {
       code: `<template>
@@ -68,10 +68,6 @@ export default {
 <\/script>
 `
     }
-  },
-
-  components: {
-    FCode
   }
 }
 </script>

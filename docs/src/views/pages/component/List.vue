@@ -8,7 +8,7 @@
     </section>
 
     <section class="bg-light p-1 rounded">
-      <f-list url="https://api.elytra.no/v1/players" :limit="5" v-slot="{ item }">
+      <f-list url="http://localhost:2999/v1/packages" :limit="2" v-slot="{ item }">
         <div class="bg-dark p-2 text-white rounded">
           {{ item.name }}
         </div>
@@ -39,7 +39,7 @@
 
 <script>
 /*eslint-disable no-useless-escape */
-import { FList, FCode } from 'framework'
+import { FList } from 'framework'
 
 export default {
   data: function() {
@@ -108,8 +108,7 @@ export default {
   },
 
   components: {
-    FList,
-    FCode
+    FList
   }
 }
 </script>

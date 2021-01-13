@@ -9,7 +9,3 @@ export default {
   name: 'FrameworkLoading'
 }
 </script>
-
-<style lang="scss">
-
-</style>

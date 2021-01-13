@@ -21,9 +21,9 @@
 
 <script>
 /*eslint-disable no-useless-escape */
-import { FCode } from 'framework'
-
 export default {
+  name: "PageRouter",
+
   data: function() {
     return {
       codeRouterJS: `import Vue from 'vue'
@@ -51,7 +51,7 @@ const routes = [
 
       },
       footer: {
-        
+
       }
     }
   },
@@ -94,10 +94,6 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')`
     }
-  },
-
-  components: {
-    FCode
   }
 }
 </script>

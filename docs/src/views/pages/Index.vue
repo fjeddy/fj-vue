@@ -35,8 +35,8 @@
 
     <section>
       <h2>Bootstrap</h2>
-      <p>Bootstrap is included by default in this framework, tho, only CSS included,
-        and only a few subset files. Bootstrap as a whole is not included.</p>
+      <p>Bootstrap is included by default in this framework, tho, only CSS is included,
+        and a few select files. Bootstrap as a whole is not included.</p>
 
       <pre>@import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -58,6 +58,10 @@
 @import "~bootstrap/scss/helpers";
 @import "~bootstrap/scss/utilities/api";
       </pre>
+
+      <p>This framework is bootstrap based, but any additional part of bootstrap
+      you might want and need, should be included directly in your own project.
+      This framework only includes the parts of Bootstrap it uses.</p>
     </section>
 
     <section>
@@ -105,11 +109,7 @@ export default {
 </template>
 
 <script>
-import { FCode } from 'framework'
-
 export default {
-  components: {
-    FCode
-  }
+  name: "PageIndex"
 }
 </script>

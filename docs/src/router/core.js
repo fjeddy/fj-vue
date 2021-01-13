@@ -15,7 +15,7 @@ module.exports = [
   },
 
   {
-    path: '/app',
+    path: '/app.vue',
     name: 'App',
     components: {
       default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/App.vue'),
@@ -30,7 +30,7 @@ module.exports = [
   },
 
   {
-    path: '/router',
+    path: '/router.js',
     name: 'Router',
     components: {
       default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/Router.vue'),
