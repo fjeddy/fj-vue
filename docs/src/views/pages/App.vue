@@ -6,8 +6,10 @@
       <p>The contents of App.vue is quite simple and straight forward. The
         framework assumes that you are using <code>vue-router</code> and provide the options
         using meta data in the router.</p>
+    </section>
 
-      <f-code :value="code" />
+    <section>
+      <f-code :value="code" title="app.vue" />
     </section>
 
   </div>

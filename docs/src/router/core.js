@@ -27,5 +27,20 @@ module.exports = [
         class: "py-5"
       }
     }
+  },
+
+  {
+    path: '/router',
+    name: 'Router',
+    components: {
+      default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/Router.vue'),
+      sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
+    },
+    meta: {
+      title: "Router",
+      navbar: {
+        class: "py-5"
+      }
+    }
   }
 ]

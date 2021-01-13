@@ -1,7 +1,10 @@
 <template>
-  <vue-code-highlight :language="language" class="f-code">
-    <slot>{{ value }}</slot>
-  </vue-code-highlight>
+  <div class="f-code">
+    <strong v-if="title">{{ title }}</strong>
+    <vue-code-highlight :language="language">
+      <slot>{{ value }}</slot>
+    </vue-code-highlight>
+  </div>
 </template>
 
 <script>
@@ -19,6 +22,11 @@ export default {
       type: String,
       required: false,
       default: 'javascript'
+    },
+
+    title: {
+      type: String,
+      required: false
     }
   },
 

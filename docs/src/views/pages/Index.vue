@@ -66,7 +66,6 @@
         at once in Vue. This will include every component within the framework
         and make them globally available.</p>
 
-      <strong>main.js</strong>
       <f-code :value="`import Vue from 'vue'
 import Framework from 'f-vue'
 
@@ -76,7 +75,7 @@ Vue.use(Framework)
 
 new Vue({
   render: h => h(App)
-}).$mount('#app')`" />
+}).$mount('#app')`" title="main.js" />
     </section>
 
     <section>
@@ -85,7 +84,6 @@ new Vue({
       is the recommended way of using this framework. Assuming you lazyload
       the routes itself, then you just load the subset of the framework you need.</p>
 
-      <strong>MyRoute.vue</strong>
       <f-code :value="`<template>
   <f-list>
     My list item here
@@ -100,7 +98,7 @@ export default {
     FList
   }
 }
-</script>`" />
+</script>`" title="MyRoute.vue" />
     </section>
 
   </div>
