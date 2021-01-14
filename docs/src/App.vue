@@ -6,9 +6,15 @@
         Framework.vue
       </router-link>
 
-      <router-link to="/" v-if="this.$route.path != '/'">
-        &lt;- Go back home
-      </router-link>
+      <div>
+        <a href="https://github.com/fjeddy/fj-vue" target="_blank" class="me-3">
+          GitHub
+        </a>
+
+        <a href="https://www.npmjs.com/package/fj-vue" target="_blank">
+          NPM
+        </a>
+      </div>
     </f-navbar>
 
     <f-header :data="this.$route.meta.header" class="py-5 bg-dark text-white">

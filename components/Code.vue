@@ -59,7 +59,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../sass/variables.scss';
+
 .f-code pre {
-  border-radius: 3px;
+  border-radius: $f-code-border-radius;
+  font-size: $f-code-font-size;
 }
 </style>

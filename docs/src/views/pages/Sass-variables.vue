@@ -12,6 +12,7 @@
         own set of sass variables that fj-vue heavily relies on.</p>
 
       <div class="alert alert-warning my-4">
+        <i class="fa-icon gg-info d-inline-block"></i>
         Bootstrap comes with many many variables, we have only listed the ones
         that are actually used by the framework.
       </div>
@@ -23,6 +24,16 @@ $font-size-base:            1rem;
 $line-height-base:          1.428571429;
 
 // Colors`" language="scss" />
+    </section>
+
+    <section>
+      <h2>fj-vue</h2>
+      <p>fj-vue comes with a few of it's own variables that can also be changed
+      and defined.</p>
+
+      <f-code :value="`// Code blocks
+$f-code-font-size:                   .9em;
+$f-code-border-radius:               3px;`" language="scss" />
     </section>
 
   </div>
