@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="d-flex flex-column h-100">
 
-    <f-navbar class="navbar-light bg-light">
+    <f-navbar class="navbar-light">
       <router-link to="/" class="navbar-brand">
         Framework.vue
       </router-link>
@@ -25,7 +25,7 @@
       <router-view></router-view>
     </f-content>
 
-    <f-footer class="py-5 mt-5 bg-light">
+    <f-footer>
       <p class="m-0">It's a footer, a footer that always sticks to the bottom.</p>
     </f-footer>
 

@@ -18,6 +18,7 @@
 
 <script>
 import { Affix } from 'vue-affix'
+import merge from 'lodash/merge'
 
 export default {
   name: 'FrameworkLayout',
@@ -29,7 +30,7 @@ export default {
   computed: {
     options() {
       if (this.$route.meta?.sidebar) {
-        return { ...this.$fj.sidebar, ...this.$route.meta?.sidebar }
+        return merge(this.$fj.sidebar, this.$route.meta.sidebar)
       }
       return this.$fj.footer
     },

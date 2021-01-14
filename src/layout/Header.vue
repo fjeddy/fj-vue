@@ -7,13 +7,15 @@
 </template>
 
 <script>
+import merge from 'lodash/merge'
+
 export default {
   name: 'FrameworkHeader',
 
   computed: {
     options() {
       if (this.$route.meta?.header) {
-        return { ...this.$fj.header, ...this.$route.meta?.header }
+        return merge(this.$fj.header, this.$route.meta.header)
       }
       return this.$fj.header
     },

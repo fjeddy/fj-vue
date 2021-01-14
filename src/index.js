@@ -1,3 +1,5 @@
+import merge from 'lodash/merge'
+
 import FContent from './layout/Content.vue'
 import FHeader from './layout/Header.vue'
 import FNavbar from './layout/Navbar.vue'
@@ -24,10 +26,14 @@ export default {
     const def_options = {
       navbar: {},
       header: {},
-      sidebar: {},
-      footer: {}
+      sidebar: {
+        follow: true
+      },
+      footer: {
+        class: 'py-5'
+      }
     }
-    const options = { ...def_options, ...app_options }
+    const options = merge(def_options, app_options)
 
     Vue.prototype.$fj = options
 
