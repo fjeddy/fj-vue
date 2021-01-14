@@ -51,7 +51,9 @@ export default {
     async fetchLanguage() {
       if (this.language) {
         await languages[this.language]
-        Prism.highlightAllUnder(this.$refs.codeBlock)
+          .then(() => {
+            Prism.highlightAllUnder(this.$refs.codeBlock)
+          })
       }
     }
   }
