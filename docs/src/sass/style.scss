@@ -1,4 +1,4 @@
-@import "~fj-vue/sass/variables.scss";
+@import "~fj-vue/src/sass/variables.scss";
 
 $body-bg:                   $light;
 $body-color:                $gray-900;
@@ -6,7 +6,7 @@ $body-color:                $gray-900;
 $font-size-base:            1.1rem;
 $line-height-base:          1.6;
 
-@import "~fj-vue/sass/framework.scss";
+@import "~fj-vue/src/sass/framework.scss";
 
 html,
 body {

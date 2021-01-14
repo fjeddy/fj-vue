@@ -10,10 +10,12 @@
 export default {
   name: 'FrameworkFooter',
 
-  props: {
-    options: {
-      type: Object,
-      required: false
+  computed: {
+    options() {
+      if (this.$route.meta?.footer) {
+        return { ...this.$fj.footer, ...this.$route.meta?.footer }
+      }
+      return this.$fj.footer
     }
   }
 }

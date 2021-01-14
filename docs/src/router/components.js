@@ -7,10 +7,7 @@ module.exports = [
       sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
     },
     meta: {
-      title: "List",
-      navbar: {
-        class: "py-5"
-      }
+      title: "List"
     }
   },
 
@@ -22,10 +19,7 @@ module.exports = [
       sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
     },
     meta: {
-      title: "Code",
-      navbar: {
-        class: "py-5"
-      }
+      title: "Code"
     }
   },
 
@@ -37,10 +31,7 @@ module.exports = [
       sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
     },
     meta: {
-      title: "Alert",
-      navbar: {
-        class: "py-5"
-      }
+      title: "Alert"
     }
   }
 ]

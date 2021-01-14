@@ -26,20 +26,20 @@ export default {
     Affix
   },
 
-  props: {
-    options: {
-      type: Object,
-      required: false
-    }
-  },
-
   computed: {
+    options() {
+      if (this.$route.meta?.sidebar) {
+        return { ...this.$fj.sidebar, ...this.$route.meta?.sidebar }
+      }
+      return this.$fj.footer
+    },
+
     isHeader() {
-      return this.options?.matched[0]?.components.header
+      return this.$route.matched[0]?.components.header
     },
 
     isSidebar() {
-      return this.options?.matched[0]?.components.sidebar
+      return this.$route.matched[0]?.components.sidebar
     }
   }
 }

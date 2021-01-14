@@ -25,25 +25,31 @@ export default {
       code: `<template>
   <div id="app" class="d-flex flex-column h-100">
 
-    <f-navbar :data="this.$route.meta.navbar" class="navbar-light bg-light">
+    <f-navbar class="navbar-light bg-light">
       <router-link to="/" class="navbar-brand">
         Framework.vue
       </router-link>
 
-      <router-link to="/" v-if="this.$route.path != '/'">
-        &lt;- Go back home
-      </router-link>
+      <div>
+        <a href="https://github.com/fjeddy/fj-vue" target="_blank" class="me-3">
+          GitHub
+        </a>
+
+        <a href="https://www.npmjs.com/package/fj-vue" target="_blank">
+          NPM
+        </a>
+      </div>
     </f-navbar>
 
-    <f-header :data="this.$route.meta.header" class="py-5 bg-dark text-white">
+    <f-header class="py-5 bg-dark text-white">
       <router-view name="header" />
     </f-header>
 
-    <f-content :data="this.$route" class="flex-fill py-5">
+    <f-content class="flex-fill py-5">
       <router-view></router-view>
     </f-content>
 
-    <f-footer :data="this.$route.meta.footer" class="py-5 mt-5 bg-light">
+    <f-footer class="py-5 mt-5 bg-light">
       <p class="m-0">It's a footer, a footer that always sticks to the bottom.</p>
     </f-footer>
 

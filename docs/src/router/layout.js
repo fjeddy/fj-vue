@@ -8,10 +8,7 @@ module.exports = [
       sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
     },
     meta: {
-      title: "Layout w/Header",
-      navbar: {
-        class: "py-5"
-      }
+      title: "Layout w/Header"
     }
   },
 
@@ -22,10 +19,7 @@ module.exports = [
       default: () => import(/* webpackChunkName: "page-layout-noSidebar" */ '@/views/pages/layout/NoSidebar.vue')
     },
     meta: {
-      title: "Layout w/No sidebar",
-      navbar: {
-        class: "py-5"
-      }
+      title: "Layout w/No sidebar"
     }
   }
 ]

@@ -10,14 +10,14 @@
 export default {
   name: 'FrameworkHeader',
 
-  props: {
-    options: {
-      type: Object,
-      required: false
-    }
-  },
-
   computed: {
+    options() {
+      if (this.$route.meta?.header) {
+        return { ...this.$fj.header, ...this.$route.meta?.header }
+      }
+      return this.$fj.header
+    },
+
     isHeader() {
       return this.$route?.matched[0]?.components.header
     }

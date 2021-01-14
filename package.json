@@ -1,15 +1,12 @@
 {
   "name": "fj-vue",
   "version": "0.0.10",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"No test specified\""
   },
   "files": [
-    "/components",
-    "/layout",
-    "/sass",
-    "/axios.js"
+    "/src"
   ],
   "author": {
     "name": "Freddy Lundekvam",

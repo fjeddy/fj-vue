@@ -10,14 +10,14 @@
 export default {
   name: 'FrameworkNavbar',
 
-  props: {
-    options: {
-      type: Object,
-      required: false
-    }
-  },
-
   computed: {
+    options() {
+      if (this.$route.meta?.navbar) {
+        return { ...this.$fj.navbar, ...this.$route.meta?.navbar }
+      }
+      return this.$fj.navbar
+    },
+
     getClasses() {
       if (this.options.class) return this.options.class
       return false

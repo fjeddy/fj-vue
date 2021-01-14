@@ -18,26 +18,18 @@ import FTabs from './components/Tabs.vue'
 import FList from './components/List.vue'
 
 export default {
-  install(Vue, options) {
+  install(Vue, app_options) {
 
-    Vue.component(FContent)
-    Vue.component(FHeader)
-    Vue.component(FNavbar)
-    Vue.component(FFooter)
+    // Set options
+    const def_options = {
+      navbar: {},
+      header: {},
+      sidebar: {},
+      footer: {}
+    }
+    const options = { ...def_options, ...app_options }
 
-    Vue.component(FLink)
-    Vue.component(FButton)
-    Vue.component(FPagination)
-    Vue.component(FCode)
-    Vue.component(FAlert)
-
-    Vue.component(FLoading)
-
-    Vue.component(FFormSelect)
-
-    Vue.component(FTabs)
-
-    Vue.component(FList)
+    Vue.prototype.$fj = options
 
   }
 }
