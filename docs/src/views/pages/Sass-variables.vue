@@ -22,7 +22,7 @@ $body-color:                $gray-900;
 $font-size-base:            1rem;
 $line-height-base:          1.428571429;
 
-// Colors`" language="sass" />
+// Colors`" language="scss" />
     </section>
 
   </div>

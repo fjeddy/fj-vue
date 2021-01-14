@@ -36,7 +36,7 @@
       <h2>API response</h2>
       <p>The response the API should give for the component to work properly.</p>
 
-      <f-code :value="api" />
+      <f-code :value="api" language="json" />
 
       <p><span class="text-danger">*</span> Every key in <code>options</code>
         can be omitted, the framework will remove the GUI if the option
