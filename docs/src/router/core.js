@@ -33,7 +33,7 @@ module.exports = [
     path: '/app.vue',
     name: 'App',
     components: {
-      default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/App.vue'),
+      default: () => import(/* webpackChunkName: "page-app" */ '@/views/pages/App.vue'),
       sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
     },
     meta: {
@@ -48,7 +48,7 @@ module.exports = [
     path: '/router.js',
     name: 'Router',
     components: {
-      default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/Router.vue'),
+      default: () => import(/* webpackChunkName: "page-router" */ '@/views/pages/Router.vue'),
       sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
     },
     meta: {

@@ -12,11 +12,24 @@ import 'prism-es6/themes/prism-tomorrow.css'
 const languages = {
   scss: import(/* webpackChunkName: "f-code-scss" */ 'prism-es6/components/prism-scss'),
   sass: import(/* webpackChunkName: "f-code-sass" */ 'prism-es6/components/prism-sass'),
-  html: import(/* webpackChunkName: "f-code-markup" */ 'prism-es6/components/prism-markup'),
   java: import(/* webpackChunkName: "f-code-java" */ 'prism-es6/components/prism-java'),
-  javascript: import(/* webpackChunkName: "f-code-javascript" */ 'prism-es6/components/prism-javascript'),
   json: import(/* webpackChunkName: "f-code-json" */ 'prism-es6/components/prism-json')
 }
+
+const d_languages = [
+  'markup',
+  'html',
+  'xml',
+  'svh',
+  'mathml',
+  'ssml',
+  'atom',
+  'rss',
+  'css',
+  'clike',
+  'javascript',
+  'js'
+]
 
 export default {
   props: {
@@ -50,10 +63,16 @@ export default {
   methods: {
     async fetchLanguage() {
       if (this.language) {
-        await languages[this.language]
-          .then(() => {
-            Prism.highlightAllUnder(this.$refs.codeBlock)
-          })
+
+        if (d_languages.includes(this.language)) {
+          Prism.highlightAllUnder(this.$refs.codeBlock)
+        } else {
+          await languages[this.language]
+            .then(() => {
+              Prism.highlightAllUnder(this.$refs.codeBlock)
+            })
+        }
+
       }
     }
   }
