@@ -1,10 +1,19 @@
 {
   "name": "fj-vue",
-  "version": "0.0.1",
+  "author": {
+    "name": "Freddy Lundekvam",
+    "url": "https://www.fjeddy.com/"
+  },
+  "version": "0.0.2",
+  "description": "A Vue.JS framework aiming towards JSON Rest API's.",
+  "keywords": "vuejs vue vue.js api rest json",
+  "homepage": "https://framework.fjeddy.com/",
+  "bugs": "https://github.com/fjeddy/framework.vue/issues",
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta1",
     "vue-affix": "^0.5.2",
     "vue-code-highlight": "^0.7.6"
-  }
+  },
+  "license": "MIT"
 }
