@@ -3,7 +3,7 @@
 
     <f-navbar class="navbar-light">
       <router-link to="/" class="navbar-brand">
-        Framework.vue
+        fj-vue
       </router-link>
 
       <div>

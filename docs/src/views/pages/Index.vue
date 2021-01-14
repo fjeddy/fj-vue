@@ -2,7 +2,7 @@
   <div>
 
     <section>
-      <h1>Framework.vue</h1>
+      <h1>Getting started</h1>
       <p class="lead">A VueJS framework aimed towards JSON API's with a certain
       JSON structure.</p>
 
