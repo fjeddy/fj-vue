@@ -19,7 +19,7 @@
         <small>{{ error }}</small>
       </div>
 
-      <div class="f-list-items" v-if="items.length">
+      <div class="f-list-items" v-if="items.list.length">
         <div class="f-list-item" v-for="l of items.list">
           <slot v-bind:item="l">
             <translate>We've failed in any attempt made to process this list... We suck :(</translate>
