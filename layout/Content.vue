@@ -27,7 +27,7 @@ export default {
   },
 
   props: {
-    data: {
+    options: {
       type: Object,
       required: false
     }
@@ -35,11 +35,11 @@ export default {
 
   computed: {
     isHeader() {
-      return this.data?.matched[0]?.components.header
+      return this.options?.matched[0]?.components.header
     },
 
     isSidebar() {
-      return this.data?.matched[0]?.components.sidebar
+      return this.options?.matched[0]?.components.sidebar
     }
   }
 }

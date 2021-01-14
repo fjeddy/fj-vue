@@ -11,7 +11,7 @@ export default {
   name: 'FrameworkHeader',
 
   props: {
-    data: {
+    options: {
       type: Object,
       required: false
     }

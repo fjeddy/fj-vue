@@ -11,7 +11,7 @@ export default {
   name: 'FrameworkFooter',
 
   props: {
-    data: {
+    options: {
       type: Object,
       required: false
     }

@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="d-flex flex-column h-100">
 
-    <f-navbar :data="this.$route.meta.navbar" class="navbar-light bg-light">
+    <f-navbar :options="this.$route.meta.navbar" class="navbar-light bg-light">
       <router-link to="/" class="navbar-brand">
         Framework.vue
       </router-link>
@@ -17,15 +17,15 @@
       </div>
     </f-navbar>
 
-    <f-header :data="this.$route.meta.header" class="py-5 bg-dark text-white">
+    <f-header :options="this.$route.meta.header" class="py-5 bg-dark text-white">
       <router-view name="header" />
     </f-header>
 
-    <f-content :data="this.$route" class="flex-fill py-5">
+    <f-content :options="this.$route" class="flex-fill py-5">
       <router-view></router-view>
     </f-content>
 
-    <f-footer :data="this.$route.meta.footer" class="py-5 mt-5 bg-light">
+    <f-footer :options="this.$route.meta.footer" class="py-5 mt-5 bg-light">
       <p class="m-0">It's a footer, a footer that always sticks to the bottom.</p>
     </f-footer>
 
