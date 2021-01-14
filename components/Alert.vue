@@ -1,0 +1,48 @@
+<template>
+  <div class="alert" :class="getClasses">
+    <div class="d-flex align-items-center">
+      <span class="me-4" v-if="icon">
+        <i class="fa-icon" :class="getIcon" style="transform: scale(1.5)" />
+      </span>
+      <span>
+        <slot>{{ content }}</slot>
+      </span>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FrameworkAlert',
+
+  props: {
+    title: {
+      type: String
+    },
+
+    content: {
+      type: String
+    },
+
+    type: {
+      type: String,
+      default: 'info'
+    },
+
+    icon: {
+      type: String
+    }
+  },
+
+  computed: {
+    getClasses() {
+      return `alert-${this.type}`
+    },
+
+    getIcon() {
+      if (!this.icon) return
+      return `gg-${this.icon}`
+    }
+  }
+}
+</script>

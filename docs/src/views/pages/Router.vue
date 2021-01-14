@@ -6,12 +6,14 @@
       <p>This framework requires the use of vue-router. It has no exceptional
       setup besides a standard vue-router configuration. All you do is define
       meta tags within the routes to configure the route.</p>
+    </section>
 
-      <div class="alert alert-warning">
-        <i class="fa-icon gg-info me-1"></i>
+    <section>
+      <f-alert icon="info">
         You can setup the router any way you want, are used to and prefer, the
         only important factor is the <code>meta</code> object within each route.
-        The way the router is displayed here, is simply just how we prefer it.</div>
+        The way the router is displayed here, is simply just how we prefer it.
+      </f-alert>
     </section>
 
     <section>

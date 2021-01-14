@@ -48,6 +48,11 @@
         <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/component/pagination'"></i>
         Pagination
       </router-link></li>
+
+      <li><router-link to="/component/alert">
+        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/component/alert'"></i>
+        Alert
+      </router-link></li>
     </ul>
 
     <ul class="list-unstyled">
