@@ -8,7 +8,8 @@
   "files": [
     "/components",
     "/layout",
-    "/sass"
+    "/sass",
+    "/axios.js"
   ],
   "author": {
     "name": "Freddy Lundekvam",
@@ -20,6 +21,7 @@
   "bugs": "https://github.com/fjeddy/fj-vue/issues",
   "dependencies": {
     "axios": "^0.21.1",
+    "axios-retry": "^3.1.9",
     "bootstrap": "^5.0.0-beta1",
     "vue-affix": "^0.5.2",
     "vue-code-highlight": "^0.7.6"

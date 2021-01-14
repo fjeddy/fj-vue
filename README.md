@@ -12,7 +12,8 @@ All the documentation can be found at [framework.fjeddy.com](https://framework.f
 This framework depends on certain other modules to simplify the integration process.
 
 * [Bootstrap v5 (Certain submodules, css only)](https://github.com/twbs/bootstrap)
-* [Axios](https://github.com/axios/axios)
+* [axios](https://github.com/axios/axios)
+* [axios-retry](https://github.com/softonic/axios-retry)
 * [vue-affix](https://github.com/eddiemf/vue-affix)
 * [vue-code-highlight](https://github.com/elisiondesign/vue-code-highlight)
 

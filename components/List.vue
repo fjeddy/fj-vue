@@ -2,7 +2,7 @@
   <div class="f-list">
 
     <div class="f-list-top d-flex align-items-center">
-      <div class="f-list-top-sort">
+      <div class="f-list-top-sort" v-if="options.order.current">
         <f-form-select :options="options.order" v-model="options.order.current" />
       </div>
 
@@ -14,7 +14,12 @@
     </div>
 
     <div class="f-list-loading" :class="{ active: loading }">
-      <div class="f-list-items">
+      <div class="f-list-error text-center p-5" v-if="error">
+        <p class="lead">Got an error while loading data from the API :(</p>
+        <small>{{ error }}</small>
+      </div>
+
+      <div class="f-list-items" v-if="items.length">
         <div class="f-list-item" v-for="l of items.list">
           <slot v-bind:item="l">
             <translate>We've failed in any attempt made to process this list... We suck :(</translate>
@@ -38,14 +43,16 @@
 
 <script>
 import { FPagination, FFormSelect } from '../'
-import Axios from 'axios'
+import Axios from '../axios.js'
+import axiosRetry from 'axios-retry'
 
 export default {
   name: 'FrameworkList',
 
   data: function() {
     return {
-      loading: true,
+      loading: false,
+      error: null,
       options: {
         limit: {
           current: this.limit || null,
@@ -96,31 +103,50 @@ export default {
   methods: {
     async fetchData() {
       if (!this.url) return
+      if (this.loading) return
+
       this.loading = true
 
-      const payload = {}
-      if (this.options.limit.current) payload.limit = this.options.limit.current
-      if (this.options.page.current) payload.page = this.options.page.current
-      if (this.options.order.current) payload.order_key = this.options.order.current
+      try {
+        const payload = {}
+        if (this.options.limit.current) payload.limit = this.options.limit.current
+        if (this.options.page.current) payload.page = this.options.page.current
+        if (this.options.order.current) payload.order_key = this.options.order.current
 
-      const { data } = await Axios.get(this.url + '?' + new URLSearchParams(payload).toString())
+        const { data } = await Axios.get(this.url + '?' + new URLSearchParams(payload).toString())
 
-      this.items.total = data.items.total
-      this.items.list = data.items.list
+        this.items.total = data.items.total
+        this.items.list = data.items.list
 
-      this.options.limit.current = data.options.limit.current
-      this.options.limit.min = data.options.limit.min
-      this.options.limit.max = data.options.limit.max
-      this.options.limit.options = data.options.limit.options
+        this.options.limit.current = data.options.limit.current
+        this.options.limit.min = data.options.limit.min
+        this.options.limit.max = data.options.limit.max
+        this.options.limit.options = data.options.limit.options
 
-      this.options.page.current = data.options.page.current
-      this.options.page.total = data.options.page.total
+        this.options.page.current = data.options.page.current
+        this.options.page.total = data.options.page.total
 
-      this.options.order.current = data.options.order.current
-      this.options.order.direction = data.options.order.direction
-      this.options.order.options = data.options.order.options
-
-      this.loading = false
+        this.options.order.current = data.options.order.current
+        this.options.order.direction = data.options.order.direction
+        this.options.order.options = data.options.order.options
+      } catch (error) {
+      console.log('hello')
+        if (error.response) {
+          // client received an error response (5xx, 4xx)
+          console.log('got response')
+        } else if (error.request) {
+          // client never received a response, or request never left
+          console.log(error.request)
+          console.log('client never got a response')
+        } else {
+          // anything else
+          console.log('Something else happend')
+        }
+        console.log('hello')
+        this.error = error
+      } finally {
+        this.loading = false
+      }
     },
 
     setUrlParams() {
@@ -159,13 +185,21 @@ export default {
   margin-top: 4px;
 }
 
+.f-list .f-list-error {
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 3px;
+}
+
 .f-list .f-list-loading {
   position: relative;
   min-height: 50px;
 }
 
 .f-list .f-list-loading.active:before {
-  content: '';
+  content: 'Loading';
+  color: #fff;
+  padding: 12px;
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
