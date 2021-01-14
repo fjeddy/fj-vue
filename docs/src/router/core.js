@@ -15,6 +15,21 @@ module.exports = [
   },
 
   {
+    path: '/sass-variables',
+    name: 'SassVariables',
+    components: {
+      default: () => import(/* webpackChunkName: "page-sassVariables" */ '@/views/pages/Sass-variables.vue'),
+      sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
+    },
+    meta: {
+      title: "App",
+      navbar: {
+        class: "py-5"
+      }
+    }
+  },
+
+  {
     path: '/app.vue',
     name: 'App',
     components: {
