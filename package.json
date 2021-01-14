@@ -1,6 +1,6 @@
 {
   "name": "fj-vue",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No test specified\""
@@ -17,7 +17,7 @@
   "description": "A Vue.JS framework aiming towards JSON Rest API's.",
   "keywords": "vuejs vue vue.js api rest json",
   "homepage": "https://framework.fjeddy.com/",
-  "bugs": "https://github.com/fjeddy/framework.vue/issues",
+  "bugs": "https://github.com/fjeddy/fj-vue/issues",
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta1",
