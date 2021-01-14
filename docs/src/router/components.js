@@ -24,6 +24,18 @@ module.exports = [
   },
 
   {
+    path: '/component/tabs',
+    name: 'Tabs',
+    components: {
+      default: () => import(/* webpackChunkName: "page-component-tabs" */ '@/views/pages/component/Tabs.vue'),
+      sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
+    },
+    meta: {
+      title: "Tabs"
+    }
+  },
+
+  {
     path: '/component/alert',
     name: 'Alert',
     components: {

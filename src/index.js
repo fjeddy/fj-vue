@@ -15,6 +15,7 @@ import FLoading from './components/Loading.vue'
 
 import FFormSelect from './components/form/Select.vue'
 
+import FTab from './components/Tab.vue'
 import FTabs from './components/Tabs.vue'
 
 import FList from './components/List.vue'
@@ -34,7 +35,6 @@ export default {
       }
     }
     const options = merge(def_options, app_options)
-
     Vue.prototype.$fj = options
 
   }
@@ -56,6 +56,7 @@ export {
 
   FFormSelect,
 
+  FTab,
   FTabs,
 
   FList

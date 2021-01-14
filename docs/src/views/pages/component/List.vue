@@ -17,31 +17,29 @@
 
     <section>
       <f-tabs>
-        <div class="f-tab" id="vue" default>
-          Tab 1
-        </div>
 
-        <div class="f-tab" id="api">
-          Tab 2
-        </div>
+        <f-tab title="Vue docs" class="bg-white p-3">
+          <h2>Component</h2>
+          <p>An example of how the component can be implemented in Vue</p>
+
+          <f-code :value="code" />
+        </f-tab>
+
+        <f-tab title="API Example" class="bg-white p-3">
+          <h2>API response</h2>
+          <p>The response the API should give for the component to work properly.</p>
+
+          <f-code :value="api" language="json" />
+
+          <p class="mb-0"><span class="text-danger">*</span> Every key in <code>options</code>
+            can be omitted, the framework will remove the GUI if the option
+            is missing. <strong>Ex:</strong> If you don't provide the <code>options.page</code>
+            in the API response, then the pagination will not be displayed.</p>
+        </f-tab>
+        
       </f-tabs>
 
-      <h2>Vue example</h2>
-      <p>An example of how the component can be implemented in Vue</p>
 
-      <f-code :value="code" />
-    </section>
-
-    <section>
-      <h2>API response</h2>
-      <p>The response the API should give for the component to work properly.</p>
-
-      <f-code :value="api" language="json" />
-
-      <p><span class="text-danger">*</span> Every key in <code>options</code>
-        can be omitted, the framework will remove the GUI if the option
-        is missing. <strong>Ex:</strong> If you don't provide the <code>options.page</code>
-        in the API response, then the pagination will not be displayed.</p>
     </section>
 
   </div>
