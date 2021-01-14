@@ -9,7 +9,8 @@
     "/components",
     "/layout",
     "/sass",
-    "/axios.js"
+    "/axios.js",
+    "package.json"
   ],
   "author": {
     "name": "Freddy Lundekvam",
