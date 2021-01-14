@@ -6,6 +6,16 @@
       <p>This framework requires the use of vue-router. It has no exceptional
       setup besides a standard vue-router configuration. All you do is define
       meta tags within the routes to configure the route.</p>
+
+      <div class="alert alert-warning">
+        <i class="fa-icon gg-info me-1"></i>
+        You can setup the router any way you want, are used to and prefer, the
+        only important factor is the <code>meta</code> object within each route.
+        The way the router is displayed here, is simply just how we prefer it.</div>
+    </section>
+
+    <section>
+      <f-code :value="codeRouterCoreJS" title="router/core.js" />
     </section>
 
     <section>
@@ -26,12 +36,7 @@ export default {
 
   data: function() {
     return {
-      codeRouterJS: `import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
-
-const routes = [
+      codeRouterCoreJS: `module.exports = [
   {
     path: '/',
     name: 'Home',
@@ -71,17 +76,41 @@ const routes = [
       }
     }
   }
+]`,
+      codeRouterJS: `import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+import core from '@/router/core'
+
+const routes = [
+  ...core,
+
+  {
+    path: '*',
+    name: '404',
+    component: () => import('@/views/pages/404.vue')
+  }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   linkActiveClass: 'active',
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  },
   routes
 })
 
-export default router
-`,
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) document.title = to.meta.title + ' - Framework'
+  else document.title = to.name + ' - Framework'
+  next()
+})
+
+export default router`,
       codeMainJS: `import Vue from 'vue'
 
 import App from './App.vue'
