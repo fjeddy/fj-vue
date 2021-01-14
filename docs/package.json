@@ -1,6 +1,6 @@
 {
-  "name": "framework.example",
-  "version": "0.0.1",
+  "name": "fj-vue-example",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
