@@ -14,6 +14,7 @@ This framework depends on certain other modules to simplify the integration proc
 * [Bootstrap v5 (Certain submodules, css only)](https://github.com/twbs/bootstrap)
 * [Axios](https://github.com/axios/axios)
 * [vue-affix](https://github.com/eddiemf/vue-affix)
+* [vue-code-highlight](https://github.com/elisiondesign/vue-code-highlight)
 
 Most components are lazyloaded, so no module will actually be included if you
 don't use a module in the framework that use one of the dependencies. This of course
