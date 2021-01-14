@@ -66,13 +66,20 @@
     </section>
 
     <section>
+      <h2>Installing the package</h2>
+      <p>Include the package in your build to get started.</p>
+
+      <f-code value="npm install fj-vue -S" />
+    </section>
+
+    <section>
       <h2>Installing the entire framework</h2>
       <p>It's possible, but not recommended, to install the entire framework
         at once in Vue. This will include every component within the framework
         and make them globally available.</p>
 
       <f-code :value="`import Vue from 'vue'
-import Framework from 'f-vue'
+import Framework from 'fj-vue'
 
 import App from './App.vue'
 
@@ -96,7 +103,7 @@ new Vue({
 </template>
 
 <script>
-import { FList } from 'f-vue'
+import { FList } from 'fj-vue'
 
 export default {
   components: {

@@ -19,7 +19,7 @@
 /*eslint-disable no-useless-escape */
 export default {
   name: "PageApp",
-  
+
   data: function() {
     return {
       code: `<template>
@@ -55,7 +55,7 @@ export default {
 </template>
 
 <script>
-import { FContent, FHeader, FNavbar, FFooter } from 'framework'
+import { FContent, FHeader, FNavbar, FFooter } from 'fj-vue'
 
 export default {
   components: {

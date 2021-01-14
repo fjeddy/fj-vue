@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { FContent, FHeader, FNavbar, FFooter } from 'framework'
+import { FContent, FHeader, FNavbar, FFooter } from 'fj-vue'
 
 export default {
   components: {

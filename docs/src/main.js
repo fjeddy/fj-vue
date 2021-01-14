@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { FCode, FTabs } from 'framework'
+import { FCode, FTabs } from 'fj-vue'
 
 import App from './App.vue'
 import router from '@/router'

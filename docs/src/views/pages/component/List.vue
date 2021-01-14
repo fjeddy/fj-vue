@@ -49,7 +49,7 @@
 
 <script>
 /*eslint-disable no-useless-escape */
-import { FList } from 'framework'
+import { FList } from 'fj-vue'
 
 export default {
   data: function() {
@@ -76,7 +76,7 @@ export default {
 </template>
 
 <script>
-import { FList } from 'f-vue'
+import { FList } from 'fj-vue'
 
 export default {
   components: {
