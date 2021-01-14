@@ -5,6 +5,12 @@
   "scripts": {
     "test": "echo \"No test specified\""
   },
+  "files": [
+    "/components",
+    "/layout",
+    "/sass",
+    "/axios.js"
+  ],
   "author": {
     "name": "Freddy Lundekvam",
     "url": "https://www.fjeddy.com/"
