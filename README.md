@@ -15,7 +15,7 @@ This framework depends on certain other modules to simplify the integration proc
 * [axios](https://github.com/axios/axios)
 * [axios-retry](https://github.com/softonic/axios-retry)
 * [vue-affix](https://github.com/eddiemf/vue-affix)
-* [vue-code-highlight](https://github.com/elisiondesign/vue-code-highlight)
+* [prism-es6](https://github.com/elisiondesign/prism-es6)
 
 Most components are lazyloaded, so no module will actually be included if you
 don't use a module in the framework that use one of the dependencies. This of course
