@@ -6,7 +6,7 @@ If you don't control the API, aka, make the API, then this framework is likely o
 This is a personal project, made to simplify my life. Feel free to use it, if you can, and want too.
 
 ## Documentation & demo
-All the documentation can be found at [framework.fjeddy.com](https://framework.fjeddy.com/). The demo is written and made solely using this framework. The same docs can be found in the `docs/` folder in this repo.
+All the documentation can be found at [fj-vue.fjeddy.com](https://fj-vue.fjeddy.com/). The demo is written and made solely using this framework. The same docs can be found in the `docs/` folder in this repo.
 
 ## Included dependencies
 This framework depends on certain other modules to simplify the integration process.
