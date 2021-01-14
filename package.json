@@ -1,10 +1,16 @@
 {
   "name": "fj-vue",
+  "version": "0.0.4",
+  "main": "index.js",
+  "files": [
+    "/components",
+    "/layout",
+    "/sass"
+  ],
   "author": {
     "name": "Freddy Lundekvam",
     "url": "https://www.fjeddy.com/"
   },
-  "version": "0.0.3",
   "description": "A Vue.JS framework aiming towards JSON Rest API's.",
   "keywords": "vuejs vue vue.js api rest json",
   "homepage": "https://framework.fjeddy.com/",
