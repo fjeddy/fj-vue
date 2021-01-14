@@ -17,7 +17,7 @@
   },
   "description": "A Vue.JS framework aiming towards JSON Rest API's.",
   "keywords": "vuejs vue vue.js api rest json",
-  "homepage": "https://framework.fjeddy.com/",
+  "homepage": "https://fj-vue.fjeddy.com/",
   "bugs": "https://github.com/fjeddy/fj-vue/issues",
   "dependencies": {
     "axios": "^0.21.1",
