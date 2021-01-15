@@ -33,6 +33,9 @@ export default {
         },
         footer: {
           class: 'py-5'
+        },
+        codeBlock: {
+          forceExpandOnLine: 12
         }
       },
       language: {

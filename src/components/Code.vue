@@ -1,7 +1,7 @@
 <template>
   <div class="f-code" ref="codeBlock">
     <strong v-if="title">{{ title }}</strong>
-    <div class="f-code-content" :class="{ expanded: isExpanded }" v-on:click="toggleExpansion">
+    <div class="f-code-content" :class="{ expanded: isExpanded || toSmallForExpansion }" v-on:click="toggleExpansion">
       <pre :class="languageClass"><code><slot>{{ value }}</slot></code></pre>
     </div>
   </div>
@@ -36,7 +36,8 @@ const d_languages = [
 export default {
   data: function() {
     return {
-      isExpanded: this.expand
+      isExpanded: this.expand,
+      toSmallForExpansion: false
     }
   },
 
@@ -63,14 +64,15 @@ export default {
     }
   },
 
+  mounted() {
+    this.fetchLanguage()
+    if (this.value && this.value.split("\n").length <= this.$fj.options.codeBlock.forceExpandOnLine) this.toSmallForExpansion = true
+  },
+
   computed: {
     languageClass() {
       return `language-${this.language}`
     }
-  },
-
-  mounted() {
-    this.fetchLanguage()
   },
 
   methods: {
@@ -91,6 +93,7 @@ export default {
 
     toggleExpansion() {
       if (this.expand) return
+      if (this.toSmallForExpansion) return
       this.isExpanded = !this.isExpanded
     }
   }

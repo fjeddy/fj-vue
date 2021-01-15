@@ -13,8 +13,8 @@
   hmmm: 'Waddup?'
 }`" />
 
-      <f-code language="html" class="mt-3">
-        <p>This is my code of some sort</p>
+      <f-code language="html" class="mt-3" :value="codeText">
+
       </f-code>
     </section>
 
@@ -67,6 +67,7 @@
 export default {
   data: function() {
     return {
+      codeText: '<p>This is my code of some sort</p>',
       code: `<template>
   <div>
 
