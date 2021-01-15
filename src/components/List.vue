@@ -47,7 +47,6 @@
 <script>
 import { FPagination, FFormSelect } from '../'
 import Axios from '../axios.js'
-import axiosRetry from 'axios-retry'
 
 export default {
   name: 'FrameworkList',
@@ -141,19 +140,13 @@ export default {
         this.options.order.direction = data.options.order.direction
         this.options.order.options = data.options.order.options
       } catch (error) {
-      console.log('hello')
         if (error.response) {
           // client received an error response (5xx, 4xx)
-          console.log('got response')
         } else if (error.request) {
           // client never received a response, or request never left
-          console.log(error.request)
-          console.log('client never got a response')
         } else {
           // anything else
-          console.log('Something else happend')
         }
-        console.log('hello')
         this.error = error
       } finally {
         this.loading = false

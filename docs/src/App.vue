@@ -2,18 +2,20 @@
   <div id="app" class="d-flex flex-column h-100">
 
     <f-navbar class="navbar-light">
-      <router-link to="/" class="navbar-brand">
-        fj-vue
-      </router-link>
+      <div class="container">
+        <router-link to="/" class="navbar-brand">
+          fj-vue
+        </router-link>
 
-      <div>
-        <a href="https://github.com/fjeddy/fj-vue" target="_blank" class="me-3">
-          GitHub
-        </a>
+        <div>
+          <a href="https://github.com/fjeddy/fj-vue" target="_blank" class="me-3">
+            GitHub
+          </a>
 
-        <a href="https://www.npmjs.com/package/fj-vue" target="_blank">
-          NPM
-        </a>
+          <a href="https://www.npmjs.com/package/fj-vue" target="_blank">
+            NPM
+          </a>
+        </div>
       </div>
     </f-navbar>
 
