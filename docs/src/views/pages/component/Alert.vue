@@ -11,16 +11,18 @@
         Info
       </f-alert>
 
-      <f-alert type="success">
-        Success
+      <f-alert type="success" title="Stay alert buddy">
+        Success with a title
       </f-alert>
 
       <f-alert type="danger">
-        Danger
+        An extended error message with loads of content.. Woot woot
+        <hr class="my-2" />
+        <small>Love the world, and the world will love you back</small>
       </f-alert>
 
       <f-alert type="warning" icon="info">
-        Warning
+        Warning with an icon
       </f-alert>
     </section>
 
@@ -46,16 +48,18 @@ export default {
       Info
     </f-alert>
 
-    <f-alert type="success">
-      Success
+    <f-alert type="success" title="Stay alert buddy">
+      Success with a title
     </f-alert>
 
     <f-alert type="danger">
-      Danger
+      An extended error message with loads of content.. Woot woot
+      <hr class="my-2" />
+      <small>Love the world, and the world will love you back</small>
     </f-alert>
 
-    <f-alert type="warning">
-      Warning
+    <f-alert type="warning" icon="info">
+      Warning with an icon
     </f-alert>
 
   </div>
