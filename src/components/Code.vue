@@ -1,7 +1,9 @@
 <template>
   <div class="f-code" ref="codeBlock">
     <strong v-if="title">{{ title }}</strong>
-    <pre :class="languageClass"><code><slot>{{ value }}</slot></code></pre>
+    <div class="f-code-content" :class="{ expanded: isExpanded }" v-on:click="toggleExpansion">
+      <pre :class="languageClass"><code><slot>{{ value }}</slot></code></pre>
+    </div>
   </div>
 </template>
 
@@ -32,6 +34,12 @@ const d_languages = [
 ]
 
 export default {
+  data: function() {
+    return {
+      isExpanded: this.expand
+    }
+  },
+
   props: {
     value: {
       type: String,
@@ -47,6 +55,11 @@ export default {
     title: {
       type: String,
       required: false
+    },
+
+    expand: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -74,6 +87,11 @@ export default {
         }
 
       }
+    },
+
+    toggleExpansion() {
+      if (this.expand) return
+      this.isExpanded = !this.isExpanded
     }
   }
 }
@@ -82,8 +100,40 @@ export default {
 <style lang="scss">
 @import '../sass/variables.scss';
 
+.f-code .f-code-content {
+  height: 100px;
+  overflow: hidden;
+  border-radius: $f-code-border-radius;
+  position: relative;
+}
+
+.f-code .f-code-content:hover:before {
+  content: 'Click to expand';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.f-code .f-code-content.expanded:before {
+  display: none;
+}
+
 .f-code pre {
+  overflow: hidden;
   border-radius: $f-code-border-radius;
   font-size: $f-code-font-size;
+  height: 100%;
+  margin: 0;
+}
+
+.f-code .f-code-content.expanded {
+  height: auto;
+  overflow: auto;
 }
 </style>

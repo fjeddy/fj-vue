@@ -9,7 +9,7 @@
       <h3>Installing the package</h3>
       <p>First thing first, we need to include the fj-vue package in our project.</p>
 
-      <f-code value="npm install fj-vue -S" />
+      <f-code value="npm install fj-vue -S" expand />
     </section>
 
     <section>
