@@ -100,6 +100,10 @@ export default {
 <style lang="scss">
 @import '../sass/variables.scss';
 
+.f-code {
+  margin: 15px 0;
+}
+
 .f-code .f-code-content {
   height: 100px;
   overflow: hidden;

@@ -19,22 +19,21 @@
       </div>
 
       <div class="f-list-error text-center p-5" v-if="error">
-        <p class="lead">Got an error while loading data from the API :(</p>
+        <p class="lead">{{ this.$fj.language.apiError }}</p>
         <small>{{ error }}</small>
       </div>
 
       <div class="f-list-items" v-if="items.list && items.list.length">
         <div class="f-list-item" v-for="l of items.list">
           <slot v-bind:item="l">
-            <translate>We've failed in any attempt made to process this list... We suck :(</translate>
+
           </slot>
         </div>
       </div>
     </div>
 
     <div class="f-list-bottom d-flex align-items-center">
-      <div class="f-list-bottom-info flex-fill ps-1" v-if="items.list && items.total">
-        Viewing <strong>{{ items.list.length }}</strong> of <strong>{{ items.total }}</strong> items
+      <div class="f-list-bottom-info flex-fill ps-1" v-html="stringViewing" v-if="items.list && items.total">
       </div>
 
       <f-pagination
@@ -102,6 +101,14 @@ export default {
     const { page } = this.$route.query
     if (page) this.options.page.current = page
     this.fetchData()
+  },
+
+  computed: {
+    stringViewing() {
+      return this.$fj.language.listViewing
+        .replaceAll('%limit', `<strong>${this.items.list.length}</strong>`)
+        .replaceAll('%total',`<strong>${this.items.total}</strong>`)
+    }
   },
 
   methods: {

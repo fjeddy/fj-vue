@@ -30,9 +30,9 @@ export default {
   computed: {
     options() {
       if (this.$route.meta?.sidebar) {
-        return merge(this.$fj.sidebar, this.$route.meta.sidebar)
+        return merge(this.$fj.options.sidebar, this.$route.meta.sidebar)
       }
-      return this.$fj.footer
+      return this.$fj.options.sidebar
     },
 
     isHeader() {

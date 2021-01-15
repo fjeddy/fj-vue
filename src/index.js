@@ -25,13 +25,24 @@ export default {
 
     // Set options
     const def_options = {
-      navbar: {},
-      header: {},
-      sidebar: {
-        follow: true
+      options: {
+        navbar: {},
+        header: {},
+        sidebar: {
+          follow: true
+        },
+        footer: {
+          class: 'py-5'
+        }
       },
-      footer: {
-        class: 'py-5'
+      language: {
+        apiError: "Got an error while loading data from the API :(",
+        apiFailed: "We've failed in any attempt made to process this list... We suck :(",
+        listViewing: "Viewing %limit of %total items",
+        pagination: {
+          previous: "Previous",
+          next: "Next"
+        }
       }
     }
     const options = merge(def_options, app_options)

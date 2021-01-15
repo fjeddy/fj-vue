@@ -7,12 +7,14 @@ import router from '@/router'
 Vue.config.productionTip = true
 
 Vue.use(FJVue, {
-  navbar: {
-    class: 'py-5'
-  },
-  header: {},
-  sidebar: {},
-  footer: {}
+  options: {
+    navbar: {
+      class: 'py-5'
+    },
+    header: {},
+    sidebar: {},
+    footer: {}
+  }
 })
 
 Vue.component('f-code', FCode)

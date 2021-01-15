@@ -4,7 +4,7 @@
     <ul class="pagination m-0">
       <li class="page-item" :class="{ disabled: !hasPrevious }">
         <router-link class="page-link" to="" @click.native.prevent="goToPage('-1')">
-          Previous
+          {{ this.$fj.language.pagination.previous }}
         </router-link>
       </li>
 
@@ -16,7 +16,7 @@
 
       <li class="page-item" :class="{ disabled: !hasNext }">
         <router-link class="page-link" to="" @click.native.prevent="goToPage('+1')">
-          Next
+          {{ this.$fj.language.pagination.next }}
         </router-link>
       </li>
     </ul>

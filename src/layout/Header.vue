@@ -15,9 +15,9 @@ export default {
   computed: {
     options() {
       if (this.$route.meta?.header) {
-        return merge(this.$fj.header, this.$route.meta.header)
+        return merge(this.$fj.options.header, this.$route.meta.header)
       }
-      return this.$fj.header
+      return this.$fj.options.header
     },
 
     isHeader() {

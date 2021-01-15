@@ -15,9 +15,9 @@ export default {
   computed: {
     options() {
       if (this.$route.meta?.footer) {
-        return merge(this.$fj.footer, this.$route.meta.footer)
+        return merge(this.$fj.options.footer, this.$route.meta.footer)
       }
-      return this.$fj.footer
+      return this.$fj.options.footer
     },
 
     classes() {

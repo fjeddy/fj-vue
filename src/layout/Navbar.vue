@@ -15,9 +15,9 @@ export default {
   computed: {
     options() {
       if (this.$route.meta?.navbar) {
-        return merge(this.$fj.navbar, this.$route.meta.navbar)
+        return merge(this.$fj.options.navbar, this.$route.meta.navbar)
       }
-      return this.$fj.navbar
+      return this.$fj.options.navbar
     },
 
     classes() {
