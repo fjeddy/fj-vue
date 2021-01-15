@@ -24,6 +24,12 @@
     </section>
 
     <section>
+      <h3>Demo</h3>
+      <p>The entire docs for fj-vue (The site you are on) is made solely using fj-vue.
+      Reading the docs, then you are also looking at our demo :)</p>
+    </section>
+
+    <section>
       <h3>Functionality over size</h3>
       <p>Size is important, as in, the smaller the better. But functionality is
       even more important. This framework will try to keep things as tight as
