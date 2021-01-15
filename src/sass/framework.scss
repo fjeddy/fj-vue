@@ -1,33 +1,9 @@
-/**
-*** Bootstrap
-**/
-
-@import "~bootstrap/scss/utilities";
-
-@import "~bootstrap/scss/root";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/images";
-@import "~bootstrap/scss/containers";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/nav";
-@import "~bootstrap/scss/navbar";
-@import "~bootstrap/scss/pagination";
-@import "~bootstrap/scss/tables";
-@import "~bootstrap/scss/badge";
-@import "~bootstrap/scss/alert";
-@import "~bootstrap/scss/list-group";
-
-@import "~bootstrap/scss/helpers";
-@import "~bootstrap/scss/utilities/api";
-
+@import "./bootstrap.scss";
+@import "./icons.scss";
 
 /**
 *** Framework
 **/
 
 // @import url('https://css.gg/css?=|info|arrow-right|chevron-right|chevron-double-right|spinner-two-alt|copy|arrows-expand-left-alt|minimize-alt');
-@import "./icons.scss";
 @import "./core.scss";

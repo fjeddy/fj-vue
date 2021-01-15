@@ -1,0 +1,26 @@
+/**
+*** Bootstrap
+**/
+
+@import "~bootstrap/scss/utilities";
+
+/** Core **/
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+
+/** Navbar **/
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+
+/** Components **/
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/alert";
+
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/utilities/api";
