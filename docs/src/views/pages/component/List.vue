@@ -78,66 +78,70 @@ import { FList } from 'fj-vue'
 export default {
   data: function() {
     return {
-      code: `<template>
-  <div>
-    <f-list
-      url="https://api.elytra.no/v1/players"
-      v-slot="{ item }"
+      code: `
+        <template>
+          <div>
+            <f-list
+              url="https://api.elytra.no/v1/players"
+              v-slot="{ item }"
 
-      :limit="10">
+              :limit="10">
 
-      <div class="bg-dark p-2 text-white">
-        {{ item.name }}
-      </div>
+              <div class="bg-dark p-2 text-white">
+                {{ item.name }}
+              </div>
 
-      <!--
-      // Enter your item HTML here, the item data is contained within the
-      // 'item' object
-      -->
+              <!--
+              // Enter your item HTML here, the item data is contained within the
+              // 'item' object
+              -->
 
-    </f-list>
-  </div>
-</template>
+            </f-list>
+          </div>
+        </template>
 
-<script>
-import { FList } from 'fj-vue'
+        <script>
+        import { FList } from 'fj-vue'
 
-export default {
-  components: {
-    FList
-  }
-}
-<\/script>`,
-      api: `{
-  "options": {
-    "limit": {
-      "current": 15,
-      "min": 1,
-      "max": 50,
-      "options": []
-    },
-    "page": {
-      "current": 1,
-      "total": 23
-    },
-    "order": {
-      "current": "name",
-      "direction": "asc",
-      "options": []
-    }
-  },
-  "items": {
-    "total": 129,
-    "list": [
-      {
-        "name": "item 1"
-      },
-      {
-        "name": "item 2 "
-      }
-    ]
-  }
-}`
+        export default {
+          components: {
+            FList
+          }
+        }
+        <\/script>
+      `,
+      api: `
+        {
+          "options": {
+            "limit": {
+              "current": 15,
+              "min": 1,
+              "max": 50,
+              "options": []
+            },
+            "page": {
+              "current": 1,
+              "total": 23
+            },
+            "order": {
+              "current": "name",
+              "direction": "asc",
+              "options": []
+            }
+          },
+          "items": {
+            "total": 129,
+            "list": [
+              {
+                "name": "item 1"
+              },
+              {
+                "name": "item 2 "
+              }
+            ]
+          }
+        }
+      `
     }
   },
 

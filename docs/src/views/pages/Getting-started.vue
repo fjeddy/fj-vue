@@ -23,25 +23,27 @@
         route variables.
       </f-alert>
 
-      <f-code :value="`import Vue from 'vue'
-import FJVue from 'fj-vue'
+      <f-code :value="`
+        import Vue from 'vue'
+        import FJVue from 'fj-vue'
 
-import App from './App.vue'
+        import App from './App.vue'
 
-Vue.use(FJVue, {
-  navbar: {},
-  header: {},
-  sidebar: {
-    follow: true
-  },
-  footer: {
-    class: 'py-5'
-  }
-})
+        Vue.use(FJVue, {
+          navbar: {},
+          header: {},
+          sidebar: {
+            follow: true
+          },
+          footer: {
+            class: 'py-5'
+          }
+        })
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')`" title="main.js" />
+        new Vue({
+          render: h => h(App)
+        }).$mount('#app')
+      `" title="main.js" />
 
       <p>The options you define here will be merged with the meta tags for every
         route. You can override them on a per-route level by re-defining them in
@@ -66,27 +68,29 @@ new Vue({
       <p>You can now start importing the different parts of fj-vue you might
       need in your application. An example of doing so could be...</p>
 
-      <f-code :value="`<template>
-  <div>
+      <f-code :value="`
+        <template>
+          <div>
 
-    <f-list url='myurl' v-prop='{ item }'>
-      // Item is one element, each element is looped until the end of the list
-      {{ item.name }}
-    </f-list>
+            <f-list url='myurl' v-prop='{ item }'>
+              // Item is one element, each element is looped until the end of the list
+              {{ item.name }}
+            </f-list>
 
-  </div>
-</template>
+          </div>
+        </template>
 
-<script>
-import { FList } from 'fj-vue'
+        <script>
+        import { FList } from 'fj-vue'
 
-export default {
-  name: 'MyComponent',
-  components: {
-    FList
-  }
-}
-</script>`" title="MyComponent.vue" />
+        export default {
+          name: 'MyComponent',
+          components: {
+            FList
+          }
+        }
+        </script>
+      `" title="MyComponent.vue" />
     </section>
 
   </div>
@@ -97,40 +101,42 @@ export default {
   name: "PageIndex",
   data: function() {
     return {
-      codeAppVue: `@import "~fj-vue/src/sass/variables.scss";
+      codeAppVue: `
+        @import "~fj-vue/src/sass/variables.scss";
 
-$body-bg:                   $light;
-$body-color:                $gray-900;
+        $body-bg:                   $light;
+        $body-color:                $gray-900;
 
-$font-size-base:            1.1rem;
-$line-height-base:          1.6;
+        $font-size-base:            1.1rem;
+        $line-height-base:          1.6;
 
-@import "~fj-vue/src/sass/framework.scss";
+        @import "~fj-vue/src/sass/framework.scss";
 
-/**
-*** Your custom CSS
-**/
+        /**
+        *** Your custom CSS
+        **/
 
-html,
-body {
-  height: 100%;
-}
+        html,
+        body {
+          height: 100%;
+        }
 
-a {
-  text-decoration: none;
-}
+        a {
+          text-decoration: none;
+        }
 
-section {
-  margin: 50px 0;
-}
+        section {
+          margin: 50px 0;
+        }
 
-section:first-child {
-  margin-top: 0;
-}
+        section:first-child {
+          margin-top: 0;
+        }
 
-section:last-child {
-  margin-bottom: 0;
-}`
+        section:last-child {
+          margin-bottom: 0;
+        }
+      `
     }
   }
 }

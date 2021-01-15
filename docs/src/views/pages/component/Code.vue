@@ -8,10 +8,12 @@
     </section>
 
     <section>
-      <f-code :value="`{
-  key: 'Some test code',
-  hmmm: 'Waddup?'
-}`" />
+      <f-code :value="`
+        {
+          key: 'Some test code',
+          hmmm: 'Waddup?'
+        }
+      `" />
 
       <f-code language="html" class="mt-3" :value="codeText">
 
@@ -68,30 +70,32 @@ export default {
   data: function() {
     return {
       codeText: '<p>This is my code of some sort</p>',
-      code: `<template>
-  <div>
+      code: `
+        <template>
+          <div>
 
-    <f-code :value="\`{
-      key: 'Some test code',
-      hmmm: 'Waddup?'
-    }\`" />
+            <f-code :value="\`{
+              key: 'Some test code',
+              hmmm: 'Waddup?'
+            }\`" />
 
-    <f-code language="text">
-      This is my code of some sort
-    </f-code>
+            <f-code language="text">
+              This is my code of some sort
+            </f-code>
 
-  </div>
-</template>
+          </div>
+        </template>
 
-<script>
-import { FCode } from 'f-vue'
+        <script>
+        import { FCode } from 'f-vue'
 
-export default {
-  components: {
-    FCode
-  }
-}
-<\/script>`
+        export default {
+          components: {
+            FCode
+          }
+        }
+        <\/script>
+      `
     }
   }
 }

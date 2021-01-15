@@ -2,7 +2,7 @@
   <div class="f-code" ref="codeBlock">
     <strong v-if="title">{{ title }}</strong>
     <div class="f-code-content" :class="{ expanded: isExpanded || toSmallForExpansion }" v-on:click="toggleExpansion">
-      <pre :class="languageClass"><code><slot>{{ value }}</slot></code></pre>
+      <pre :class="languageClass"><code><slot>{{ getCodeSnippet }}</slot></code></pre>
     </div>
   </div>
 </template>
@@ -72,6 +72,27 @@ export default {
   computed: {
     languageClass() {
       return `language-${this.language}`
+    },
+
+    getCodeSnippet() {
+      const lines = this.value.split('\n')
+
+      if (this.isEmpty(lines[0])) {
+        lines.splice(0, 1)
+      }
+
+      const whitespaces = lines[0].search(/\S/)
+      if (whitespaces > 0) {
+        for (const [index, line] of lines.entries()) {
+          lines[index] = this.lctrim(line, whitespaces)
+        }
+      }
+
+      if (this.isEmpty(lines[lines.length - 1])) {
+        lines.splice(lines.length - 1, 1)
+      }
+
+      return lines.join('\n')
     }
   },
 
@@ -95,6 +116,27 @@ export default {
       if (this.expand) return
       if (this.toSmallForExpansion) return
       this.isExpanded = !this.isExpanded
+    },
+
+    isEmpty(string) {
+      return (string.length === 0 || !string.trim())
+    },
+
+    lctrim(str, count) {
+      const result = []
+      const chars = str.split('')
+      let removed = 0
+
+      for (const char of chars) {
+        if (this.isEmpty(char) && removed < count) {
+          removed++
+          if (removed === count) continue
+        } else {
+          result.push(char)
+        }
+      }
+
+      return result.join('')
     }
   }
 }

@@ -24,9 +24,11 @@
       <p>fj-vue comes with a few of it's own variables that can also be changed
       and defined.</p>
 
-      <f-code :value="`// Code blocks
-$f-code-font-size:                   .9em;
-$f-code-border-radius:               3px;`" language="scss" />
+      <f-code :value="`
+        // Code blocks
+        $f-code-font-size:                   .9em;
+        $f-code-border-radius:               3px;
+      `" language="scss" />
     </section>
 
   </div>
@@ -38,33 +40,35 @@ export default {
   name: "PageSassVariables",
   data: function() {
     return {
-      codeBootstrap: `// Core
-$body-bg:                   $white;
-$body-color:                $gray-900;
-$font-size-base:            1rem;
-$line-height-base:          1.428571429;
+      codeBootstrap: `
+        // Core
+        $body-bg:                   $white;
+        $body-color:                $gray-900;
+        $font-size-base:            1rem;
+        $line-height-base:          1.428571429;
 
-$font-size-base:            1.1rem;
-$line-height-base:          1.6;
+        $font-size-base:            1.1rem;
+        $line-height-base:          1.6;
 
-$small-font-size:           .875em;
-$text-muted:                $gray-600;
+        $small-font-size:           .875em;
+        $text-muted:                $gray-600;
 
-// Colors
-$theme-colors: (
-  "primary": #007bff,
-  "danger": #dc3545,
-  "warning": #ffc107,
-  "info": #17a2b8,
-  "dark": #343a40,
-  "light": #f8f9fa,
-  "success": #28a745,
-  "secondary": #6c757d
-);
+        // Colors
+        $theme-colors: (
+          "primary": #007bff,
+          "danger": #dc3545,
+          "warning": #ffc107,
+          "info": #17a2b8,
+          "dark": #343a40,
+          "light": #f8f9fa,
+          "success": #28a745,
+          "secondary": #6c757d
+        );
 
-// .lead
-$lead-font-size:            $font-size-base * 1.35;
-$lead-font-weight:          300;`
+        // .lead
+        $lead-font-size:            $font-size-base * 1.35;
+        $lead-font-weight:          300;
+      `
     }
   }
 }

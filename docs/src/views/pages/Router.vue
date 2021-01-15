@@ -38,92 +38,100 @@ export default {
 
   data: function() {
     return {
-      codeRouterCoreJS: `module.exports = [
-  {
-    path: '/',
-    name: 'Home',
-    components: {
-      default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/Index.vue'),
-      sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
-    },
-    meta: {
-      title: "Welcome",
-      navbar: {
-        class: "py-5"
-      },
-      sidebar: {
+      codeRouterCoreJS: `
+        module.exports = [
+          {
+            path: '/',
+            name: 'Home',
+            components: {
+              default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/Index.vue'),
+              sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
+            },
+            meta: {
+              title: "Welcome",
+              navbar: {
+                class: "py-5"
+              },
+              sidebar: {
 
-      },
-      header: {
+              },
+              header: {
 
-      },
-      footer: {
+              },
+              footer: {
 
-      }
-    }
-  },
+              }
+            }
+          },
 
-  {
-    path: '/example',
-    name: 'ExamplePage',
-    components: {
-      default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/App.vue'),
-      sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue'),
-      header: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/headers/MyHeader.vue')
-    },
-    meta: {
-      title: "App",
-      navbar: {
-        class: "py-5"
-      }
-    }
-  }
-]`,
-      codeRouterJS: `import Vue from 'vue'
-import VueRouter from 'vue-router'
+          {
+            path: '/example',
+            name: 'ExamplePage',
+            components: {
+              default: () => import(/* webpackChunkName: "page-index" */ '@/views/pages/App.vue'),
+              sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue'),
+              header: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/headers/MyHeader.vue')
+            },
+            meta: {
+              title: "App",
+              navbar: {
+                class: "py-5"
+              }
+            }
+          }
+        ]
+      `,
 
-Vue.use(VueRouter)
+      codeRouterJS: `
+        import Vue from 'vue'
+        import VueRouter from 'vue-router'
 
-import core from '@/router/core'
+        Vue.use(VueRouter)
 
-const routes = [
-  ...core,
+        import core from '@/router/core'
 
-  {
-    path: '*',
-    name: '404',
-    component: () => import('@/views/pages/404.vue')
-  }
-]
+        const routes = [
+          ...core,
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  linkActiveClass: 'active',
-  scrollBehavior () {
-    return { x: 0, y: 0 }
-  },
-  routes
-})
+          {
+            path: '*',
+            name: '404',
+            component: () => import('@/views/pages/404.vue')
+          }
+        ]
 
-router.beforeEach((to, from, next) => {
-  if (to.meta.title) document.title = to.meta.title + ' - Framework'
-  else document.title = to.name + ' - Framework'
-  next()
-})
+        const router = new VueRouter({
+          mode: 'history',
+          base: process.env.BASE_URL,
+          linkActiveClass: 'active',
+          scrollBehavior () {
+            return { x: 0, y: 0 }
+          },
+          routes
+        })
 
-export default router`,
-      codeMainJS: `import Vue from 'vue'
+        router.beforeEach((to, from, next) => {
+          if (to.meta.title) document.title = to.meta.title + ' - Framework'
+          else document.title = to.name + ' - Framework'
+          next()
+        })
 
-import App from './App.vue'
-import router from '@/router'
+        export default router
+      `,
+      
+      codeMainJS: `
+        import Vue from 'vue'
 
-Vue.config.productionTip = false
+        import App from './App.vue'
+        import router from '@/router'
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')`
+        Vue.config.productionTip = false
+
+        new Vue({
+          router,
+          render: h => h(App)
+        }).$mount('#app')
+      `
     }
   }
 }

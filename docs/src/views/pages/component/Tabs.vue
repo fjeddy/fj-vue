@@ -51,46 +51,48 @@
 export default {
   data: function() {
     return {
-      code: `<template>
-  <div>
+      code: `
+        <template>
+          <div>
 
-    <f-tabs>
+            <f-tabs>
 
-      <f-tab title="Tab 1" class="bg-white p-3">
-        This is the first tab content
-      </f-tab>
+              <f-tab title="Tab 1" class="bg-white p-3">
+                This is the first tab content
+              </f-tab>
 
-      <f-tab title="Tab 2" class="bg-white p-3">
-        This is the second tab content
-      </f-tab>
+              <f-tab title="Tab 2" class="bg-white p-3">
+                This is the second tab content
+              </f-tab>
 
-    </f-tabs>
+            </f-tabs>
 
-    <f-tabs type="pills" class="mt-5">
+            <f-tabs type="pills" class="mt-5">
 
-      <f-tab title="Tab 1" class="bg-white p-3">
-        This is the first tab content
-      </f-tab>
+              <f-tab title="Tab 1" class="bg-white p-3">
+                This is the first tab content
+              </f-tab>
 
-      <f-tab title="Tab 2" class="bg-white p-3">
-        This is the second tab content
-      </f-tab>
+              <f-tab title="Tab 2" class="bg-white p-3">
+                This is the second tab content
+              </f-tab>
 
-    </f-tabs>
+            </f-tabs>
 
-  </div>
-</template>
+          </div>
+        </template>
 
-<script>
-import { FTabs, FTab } from 'f-vue'
+        <script>
+        import { FTabs, FTab } from 'f-vue'
 
-export default {
-  components: {
-    FTabs,
-    FTab
-  }
-}
-<\/script>`
+        export default {
+          components: {
+            FTabs,
+            FTab
+          }
+        }
+        <\/script>
+      `
     }
   }
 }

@@ -22,53 +22,54 @@ export default {
 
   data: function() {
     return {
-      code: `<template>
-  <div id="app" class="d-flex flex-column h-100">
+      code: `
+        <template>
+          <div id="app" class="d-flex flex-column h-100">
 
-    <f-navbar class="navbar-light bg-light">
-      <router-link to="/" class="navbar-brand">
-        Framework.vue
-      </router-link>
+            <f-navbar class="navbar-light bg-light">
+              <router-link to="/" class="navbar-brand">
+                Framework.vue
+              </router-link>
 
-      <div>
-        <a href="https://github.com/fjeddy/fj-vue" target="_blank" class="me-3">
-          GitHub
-        </a>
+              <div>
+                <a href="https://github.com/fjeddy/fj-vue" target="_blank" class="me-3">
+                  GitHub
+                </a>
 
-        <a href="https://www.npmjs.com/package/fj-vue" target="_blank">
-          NPM
-        </a>
-      </div>
-    </f-navbar>
+                <a href="https://www.npmjs.com/package/fj-vue" target="_blank">
+                  NPM
+                </a>
+              </div>
+            </f-navbar>
 
-    <f-header class="py-5 bg-dark text-white">
-      <router-view name="header" />
-    </f-header>
+            <f-header class="py-5 bg-dark text-white">
+              <router-view name="header" />
+            </f-header>
 
-    <f-content class="flex-fill py-5">
-      <router-view></router-view>
-    </f-content>
+            <f-content class="flex-fill py-5">
+              <router-view></router-view>
+            </f-content>
 
-    <f-footer class="py-5 mt-5 bg-light">
-      <p class="m-0">It's a footer, a footer that always sticks to the bottom.</p>
-    </f-footer>
+            <f-footer class="py-5 mt-5 bg-light">
+              <p class="m-0">It's a footer, a footer that always sticks to the bottom.</p>
+            </f-footer>
 
-  </div>
-</template>
+          </div>
+        </template>
 
-<script>
-import { FContent, FHeader, FNavbar, FFooter } from 'fj-vue'
+        <script>
+        import { FContent, FHeader, FNavbar, FFooter } from 'fj-vue'
 
-export default {
-  components: {
-    FContent,
-    FHeader,
-    FNavbar,
-    FFooter
-  }
-}
-<\/script>
-`
+        export default {
+          components: {
+            FContent,
+            FHeader,
+            FNavbar,
+            FFooter
+          }
+        }
+        <\/script>
+      `
     }
   }
 }
