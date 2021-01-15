@@ -23,6 +23,34 @@
           <p>An example of how the component can be implemented in Vue</p>
 
           <f-code :value="code" />
+
+          <section>
+            <h2>Props</h2>
+            <p>Props you can use to modify the output of the component.</p>
+
+            <table class="table table-striped bg-secondary p-1 rounded">
+              <thead>
+                <tr>
+                  <th width="20%"></th>
+                  <th width="20%">Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>url</strong></td>
+                  <td class="text-info">String</td>
+                  <td class="small">An URL to the API endpoint.</td>
+                </tr>
+
+                <tr>
+                  <td><strong>limit</strong></td>
+                  <td class="text-info">Integer</td>
+                  <td class="small">The starting limit for the list, will be sent with the first query.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
         </f-tab>
 
         <f-tab title="API Example" class="bg-white p-3">
@@ -38,8 +66,6 @@
         </f-tab>
 
       </f-tabs>
-
-
     </section>
 
   </div>

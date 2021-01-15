@@ -49,7 +49,7 @@ new Vue({
     </section>
 
     <section>
-      <h2>Include SCSS</h2>
+      <h3>Include SCSS</h3>
       <p>The SCSS needs to be included in a specific order to make sure your
       custom SASS variables are not overwritten. In <code>App.vue</code> or
       any other file where you want to include the SCSS.</p>
@@ -62,7 +62,7 @@ new Vue({
     </section>
 
     <section>
-      <h2>Start using fj-vue</h2>
+      <h3>Start using fj-vue</h3>
       <p>You can now start importing the different parts of fj-vue you might
       need in your application. An example of doing so could be...</p>
 

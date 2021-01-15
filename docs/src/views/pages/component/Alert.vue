@@ -33,6 +33,40 @@
       <f-code :value="code" />
     </section>
 
+    <section>
+      <h2>Props</h2>
+      <p>Props you can use to modify the output of the component.</p>
+
+      <table class="table table-striped bg-secondary p-1 rounded">
+        <thead>
+          <tr>
+            <th width="20%"></th>
+            <th width="20%">Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>type</strong></td>
+            <td class="text-info">String</td>
+            <td class="small">What type of alert this is. Defaults to info</td>
+          </tr>
+
+          <tr>
+            <td><strong>title</strong></td>
+            <td class="text-info">String</td>
+            <td class="small">The title of the alert.</td>
+          </tr>
+
+          <tr>
+            <td><strong>icon</strong></td>
+            <td class="text-info">String</td>
+            <td class="small">Include the name of an icon that will show up on the left side of the alert.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
   </div>
 </template>
 
