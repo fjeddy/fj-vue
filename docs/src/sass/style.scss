@@ -6,6 +6,9 @@ $body-color:                $gray-900;
 $font-size-base:            1.1rem;
 $line-height-base:          1.6;
 
+$lead-font-size:            $font-size-base * 1.35;
+$lead-font-weight:          300;
+
 @import "~fj-vue/src/sass/framework.scss";
 
 html,

@@ -2,9 +2,10 @@
   <div>
 
     <section>
-      <h1>Getting started</h1>
-      <p class="lead">A VueJS framework aimed towards JSON API's with a certain
-      JSON structure.</p>
+      <h1>Overview</h1>
+      <p class="lead">fj-vue is a VueJS framework that renders
+      gui based on a JSON API response. Conforming to a specific JSON standard
+      response makes it a breeze to create a frontend using fj-vue.</p>
 
       <p>If you are the creator of a JSON API, and are also the maker of a frontend,
         then this framework might be for you. Framework.vue aims at making the
@@ -20,8 +21,10 @@
       is used in most project where we also make the backend APIs. It does not
       intend to solve any world problems or cover a specific problem, it's simply
       here to make my life easier.</p>
+    </section>
 
-      <h5 class="mt-4">Functionality over size</h5>
+    <section>
+      <h3>Functionality over size</h3>
       <p>Size is important, as in, the smaller the better. But functionality is
       even more important. This framework will try to keep things as tight as
       possible, but will not sacrifice simplicity and functionality for a smaller
@@ -34,83 +37,8 @@
     </section>
 
     <section>
-      <h2>Bootstrap</h2>
-      <p>Bootstrap is included by default in this framework, tho, only CSS is included,
-        and a few select files. Bootstrap as a whole is not included.</p>
-
-      <pre>@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/utilities";
-
-@import "~bootstrap/scss/root";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/images";
-@import "~bootstrap/scss/containers";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/nav";
-@import "~bootstrap/scss/navbar";
-@import "~bootstrap/scss/pagination";
-@import "~bootstrap/scss/badge";
-
-@import "~bootstrap/scss/helpers";
-@import "~bootstrap/scss/utilities/api";
-      </pre>
-
-      <p>This framework is bootstrap based, but any additional part of bootstrap
-      you might want and need, should be included directly in your own project.
-      This framework only includes the parts of Bootstrap it uses.</p>
-    </section>
-
-    <section>
-      <h2>Installing the package</h2>
-      <p>Include the package in your build to get started.</p>
-
-      <f-code value="npm install fj-vue -S" />
-    </section>
-
-    <section>
-      <h2>Installing the entire framework</h2>
-      <p>It's possible, but not recommended, to install the entire framework
-        at once in Vue. This will include every component within the framework
-        and make them globally available.</p>
-
-      <f-code :value="`import Vue from 'vue'
-import Framework from 'fj-vue'
-
-import App from './App.vue'
-
-Vue.use(Framework)
-
-new Vue({
-  render: h => h(App)
-}).$mount('#app')`" title="main.js" />
-    </section>
-
-    <section>
-      <h2>By component</h2>
-      <p>Loading the components you need in the components you use them in
-      is the recommended way of using this framework. Assuming you lazyload
-      the routes itself, then you just load the subset of the framework you need.</p>
-
-      <f-code :value="`<template>
-  <f-list>
-    My list item here
-  </f-list>
-</template>
-
-<script>
-import { FList } from 'fj-vue'
-
-export default {
-  components: {
-    FList
-  }
-}
-</script>`" title="MyRoute.vue" />
+      <h3>Dependencies</h3>
+      <p>fj-vue implements a few packages that simplifies our lives.</p>
     </section>
 
   </div>

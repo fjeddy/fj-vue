@@ -12,6 +12,18 @@ module.exports = [
   },
 
   {
+    path: '/getting-started',
+    name: 'GettingStarted',
+    components: {
+      default: () => import(/* webpackChunkName: "page-gettingStarted" */ '@/views/pages/Getting-started.vue'),
+      sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
+    },
+    meta: {
+      title: "Getting started"
+    }
+  },
+
+  {
     path: '/sass-variables',
     name: 'SassVariables',
     components: {

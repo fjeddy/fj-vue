@@ -4,6 +4,11 @@
     <ul class="list-unstyled">
       <li><router-link to="/">
         <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/'"></i>
+        Overview
+      </router-link></li>
+
+      <li><router-link to="/getting-started">
+        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/getting-started'"></i>
         Getting started
       </router-link></li>
 
