@@ -4,7 +4,7 @@ import FJVue, { FCode, FTab, FTabs, FAlert } from 'fj-vue'
 import App from './App.vue'
 import router from '@/router'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 Vue.use(FJVue, {
   navbar: {

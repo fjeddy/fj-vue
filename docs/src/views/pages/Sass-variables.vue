@@ -47,6 +47,9 @@ $line-height-base:          1.428571429;
 $font-size-base:            1.1rem;
 $line-height-base:          1.6;
 
+$small-font-size:           .875em;
+$text-muted:                $gray-600;
+
 // Colors
 $theme-colors: (
   "primary": #007bff,
