@@ -14,6 +14,10 @@
     </div>
 
     <div class="f-list-loading" :class="{ active: loading }">
+      <div class="f-list-loader" v-if="loading">
+        <i class="fa-icon gg-spinner-two-alt"></i> Loading
+      </div>
+
       <div class="f-list-error text-center p-5" v-if="error">
         <p class="lead">Got an error while loading data from the API :(</p>
         <small>{{ error }}</small>
@@ -196,15 +200,15 @@ export default {
   min-height: 50px;
 }
 
-.f-list .f-list-loading.active:before {
-  content: 'Loading';
-  color: #fff;
-  padding: 12px;
+.f-list .f-list-loading .f-list-loader {
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  padding: 10px;
+  color: #fff;
+  border-radius: 3px;
 }
 </style>
