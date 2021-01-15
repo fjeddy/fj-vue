@@ -33,7 +33,10 @@
 </template>
 
 <script>
-import { FContent, FHeader, FNavbar, FFooter } from 'fj-vue'
+import FContent from 'fj-vue/src/layout/Content'
+import FHeader from 'fj-vue/src/layout/Header'
+import FNavbar from 'fj-vue/src/layout/Navbar'
+import FFooter from 'fj-vue/src/layout/Footer'
 
 export default {
   components: {

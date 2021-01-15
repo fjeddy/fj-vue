@@ -1,24 +1,24 @@
 import merge from 'lodash/merge'
 
-import FContent from './layout/Content.vue'
-import FHeader from './layout/Header.vue'
-import FNavbar from './layout/Navbar.vue'
-import FFooter from './layout/Footer.vue'
+import FContent from './layout/Content'
+import FHeader from './layout/Header'
+import FNavbar from './layout/Navbar'
+import FFooter from './layout/Footer'
 
-import FLink from './components/Link.vue'
-import FButton from './components/Button.vue'
-import FPagination from './components/Pagination.vue'
-import FCode from './components/Code.vue'
-import FAlert from './components/Alert.vue'
+import FLink from './components/Link'
+import FButton from './components/Button'
+import FPagination from './components/Pagination'
+import FCode from './components/Code'
+import FAlert from './components/Alert'
 
-import FLoading from './components/Loading.vue'
+import FLoading from './components/Loading'
 
-import FFormSelect from './components/form/Select.vue'
+import FFormSelect from './components/form/Select'
 
-import FTab from './components/Tab.vue'
-import FTabs from './components/Tabs.vue'
+import FTab from './components/Tab'
+import FTabs from './components/Tabs'
 
-import FList from './components/List.vue'
+import FList from './components/List'
 
 export default {
   install(Vue, app_options) {

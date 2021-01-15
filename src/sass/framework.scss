@@ -28,5 +28,6 @@
 *** Framework
 **/
 
-@import url('https://css.gg/css?=|info|arrow-right|chevron-right|chevron-double-right|spinner-two-alt');
-@import "./_core.scss";
+// @import url('https://css.gg/css?=|info|arrow-right|chevron-right|chevron-double-right|spinner-two-alt|copy|arrows-expand-left-alt|minimize-alt');
+@import "./icons.scss";
+@import "./core.scss";
