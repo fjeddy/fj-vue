@@ -13,7 +13,7 @@
   hmmm: 'Waddup?'
 }`" />
 
-      <f-code language="html">
+      <f-code language="html" class="mt-3">
         <p>This is my code of some sort</p>
       </f-code>
     </section>
