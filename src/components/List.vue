@@ -33,7 +33,7 @@
     </div>
 
     <div class="f-list-bottom d-flex align-items-center">
-      <div class="f-list-bottom-info flex-fill" v-if="items.list && items.total">
+      <div class="f-list-bottom-info flex-fill ps-1" v-if="items.list && items.total">
         Viewing <strong>{{ items.list.length }}</strong> of <strong>{{ items.total }}</strong> items
       </div>
 

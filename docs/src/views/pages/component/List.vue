@@ -7,9 +7,9 @@
       and output automatically.</p>
     </section>
 
-    <section class="bg-light p-1 rounded">
+    <section class="bg-secondary p-1 rounded">
       <f-list url="http://localhost:2999/v1/packages" :limit="2" v-slot="{ item }">
-        <div class="bg-dark p-2 text-white rounded">
+        <div class="bg-white p-2 rounded">
           {{ item.name }}
         </div>
       </f-list>
@@ -36,7 +36,7 @@
             is missing. <strong>Ex:</strong> If you don't provide the <code>options.page</code>
             in the API response, then the pagination will not be displayed.</p>
         </f-tab>
-        
+
       </f-tabs>
 
 

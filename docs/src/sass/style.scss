@@ -6,6 +6,17 @@ $body-color:                $gray-900;
 $font-size-base:            1.1rem;
 $line-height-base:          1.6;
 
+$theme-colors: (
+  "primary": #007bff,
+  "danger": #dc3545,
+  "warning": #ffc107,
+  "info": #17a2b8,
+  "dark": #343a40,
+  "light": #f8f9fa,
+  "success": #28a745,
+  "secondary": #ddd
+);
+
 $lead-font-size:            $font-size-base * 1.35;
 $lead-font-weight:          300;
 

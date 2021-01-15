@@ -16,13 +16,7 @@
         that are actually used by the framework.
       </f-alert>
 
-      <f-code :value="`// Core
-$body-bg:                   $white;
-$body-color:                $gray-900;
-$font-size-base:            1rem;
-$line-height-base:          1.428571429;
-
-// Colors`" language="scss" />
+      <f-code :value="codeBootstrap" language="scss" />
     </section>
 
     <section>
@@ -41,6 +35,34 @@ $f-code-border-radius:               3px;`" language="scss" />
 <script>
 /*eslint-disable no-useless-escape */
 export default {
-  name: "PageSassVariables"
+  name: "PageSassVariables",
+  data: function() {
+    return {
+      codeBootstrap: `// Core
+$body-bg:                   $white;
+$body-color:                $gray-900;
+$font-size-base:            1rem;
+$line-height-base:          1.428571429;
+
+$font-size-base:            1.1rem;
+$line-height-base:          1.6;
+
+// Colors
+$theme-colors: (
+  "primary": #007bff,
+  "danger": #dc3545,
+  "warning": #ffc107,
+  "info": #17a2b8,
+  "dark": #343a40,
+  "light": #f8f9fa,
+  "success": #28a745,
+  "secondary": #6c757d
+);
+
+// .lead
+$lead-font-size:            $font-size-base * 1.35;
+$lead-font-weight:          300;`
+    }
+  }
 }
 </script>

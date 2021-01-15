@@ -7,29 +7,33 @@
     </section>
 
     <section>
-      <f-tabs>
+      <div class="bg-secondary p-1 rounded">
+        <f-tabs>
 
-        <f-tab title="Tab 1" class="bg-white p-3">
-          This is the first tab content
-        </f-tab>
+          <f-tab title="Tab 1" class="bg-white p-3">
+            This is the first tab content
+          </f-tab>
 
-        <f-tab title="Tab 2" class="bg-white p-3">
-          This is the second tab content
-        </f-tab>
+          <f-tab title="Tab 2" class="bg-white p-3">
+            This is the second tab content
+          </f-tab>
 
-      </f-tabs>
+        </f-tabs>
+      </div>
 
-      <f-tabs type="pills" class="mt-5">
+      <div class="bg-secondary p-1 rounded mt-3">
+        <f-tabs type="pills">
 
-        <f-tab title="Tab 1" class="bg-white p-3">
-          This is the first tab content
-        </f-tab>
+          <f-tab title="Tab 1" class="bg-white p-3">
+            This is the first tab content
+          </f-tab>
 
-        <f-tab title="Tab 2" class="bg-white p-3">
-          This is the second tab content
-        </f-tab>
+          <f-tab title="Tab 2" class="bg-white p-3">
+            This is the second tab content
+          </f-tab>
 
-      </f-tabs>
+        </f-tabs>
+      </div>
     </section>
 
     <section>
