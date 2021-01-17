@@ -30,13 +30,27 @@
         import App from './App.vue'
 
         Vue.use(FJVue, {
-          navbar: {},
-          header: {},
-          sidebar: {
-            follow: true
+          options: {
+            navbar: {},
+            header: {},
+            sidebar: {
+              follow: true
+            },
+            footer: {
+              class: 'py-5'
+            },
+            codeBlock: {
+              forceExpandOnLine: 12
+            }
           },
-          footer: {
-            class: 'py-5'
+          language: {
+            apiError: 'Got an error while loading data from the API :(',
+            apiFailed: 'We have failed in any attempt made to process this list... We suck :(',
+            listViewing: 'Viewing %limit of %total items',
+            pagination: {
+              previous: 'Previous',
+              next: 'Next'
+            }
           }
         })
 
