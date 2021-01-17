@@ -1,5 +1,5 @@
 <template>
-  <component :is="getType" :to="to"><slot /></component>
+  <component :is="getType" :to="to" class="f-link"><slot /></component>
 </template>
 
 <script>
