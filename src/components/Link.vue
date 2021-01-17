@@ -1,19 +1,11 @@
 <template>
-  <span class="f-link">
-
-    <router-link :to="to" v-if="!blank">
-      <slot />
-    </router-link>
-
-    <a :href="to" target="_blank" v-if="blank">
-      <i class="fa-icon fj-globe"></i>
-      <slot />
-    </a>
-
-  </span>
+  <component :is="getType" :to="to"><slot /></component>
 </template>
 
 <script>
+import Local from './link/Local.vue'
+import Remote from './link/Remote.vue'
+
 export default {
   name: 'FrameworkLink',
 
@@ -26,6 +18,18 @@ export default {
     blank: {
       type: Boolean,
       default: false
+    }
+  },
+
+  components: {
+    Local,
+    Remote
+  },
+
+  computed: {
+    getType() {
+      if (this.blank) return 'Remote'
+      return 'Local'
     }
   }
 }
