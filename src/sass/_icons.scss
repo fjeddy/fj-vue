@@ -1,6 +1,11 @@
 $fj-icons-font-family: "fj" !default;
 $fj-icons-font-path: "~fj-vue/src/fonts" !default;
 
+$fj-globe: "\e901";
+$fj-chain-broken: "\e90d";
+$fj-chain: "\e90e";
+$fj-angle-double-right: "\e90f";
+$fj-angle-double-left: "\e910";
 $fj-info: "\e90b";
 $fj-info-circle: "\e90c";
 $fj-arrow-circle-o-right: "\e907";
@@ -8,7 +13,6 @@ $fj-long-arrow-right: "\e908";
 $fj-arrow-circle-right: "\e909";
 $fj-arrow-right: "\e90a";
 $fj-spinner: "\e900";
-$fj-spinner1: "\e901";
 $fj-caret-right: "\e902";
 $fj-caret-left: "\e903";
 $fj-caret-up: "\e904";
@@ -42,6 +46,31 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fj-globe {
+  &:before {
+    content: $fj-globe;
+  }
+}
+.fj-chain-broken {
+  &:before {
+    content: $fj-chain-broken;
+  }
+}
+.fj-chain {
+  &:before {
+    content: $fj-chain;
+  }
+}
+.fj-angle-double-right {
+  &:before {
+    content: $fj-angle-double-right;
+  }
+}
+.fj-angle-double-left {
+  &:before {
+    content: $fj-angle-double-left;
+  }
+}
 .fj-info {
   &:before {
     content: $fj-info;
@@ -75,11 +104,6 @@ i {
 .fj-spinner {
   &:before {
     content: $fj-spinner;
-  }
-}
-.fj-spinner1 {
-  &:before {
-    content: $fj-spinner1;
   }
 }
 .fj-caret-right {

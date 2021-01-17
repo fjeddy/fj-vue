@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import FJVue, { FCode, FTab, FTabs, FAlert, FIcon } from 'fj-vue'
+import FJVue, { FCode, FTab, FTabs, FAlert, FIcon, FLink } from 'fj-vue'
 
 import App from './App.vue'
 import router from '@/router'
@@ -22,6 +22,7 @@ Vue.component('f-tab', FTab)
 Vue.component('f-tabs', FTabs)
 Vue.component('f-alert', FAlert)
 Vue.component('f-icon', FIcon)
+Vue.component('f-link', FLink)
 
 new Vue({
   router,

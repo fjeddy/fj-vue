@@ -3,18 +3,18 @@
 
     <f-navbar class="navbar-light">
       <div class="container">
-        <router-link to="/" class="navbar-brand">
+        <f-link to="/" class="navbar-brand">
           fj-vue
-        </router-link>
+        </f-link>
 
         <div>
-          <a href="https://github.com/fjeddy/fj-vue" target="_blank" class="me-3">
+          <f-link to="https://github.com/fjeddy/fj-vue" class="me-3" blank>
             GitHub
-          </a>
+          </f-link>
 
-          <a href="https://www.npmjs.com/package/fj-vue" target="_blank">
+          <f-link to="https://www.npmjs.com/package/fj-vue" blank>
             NPM
-          </a>
+          </f-link>
         </div>
       </div>
     </f-navbar>

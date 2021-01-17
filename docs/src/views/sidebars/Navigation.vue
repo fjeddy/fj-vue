@@ -2,10 +2,10 @@
   <div class="navigation">
 
     <ul class="list-unstyled">
-      <li><router-link to="/">
+      <li><f-link to="/">
         <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/'" />
         Overview
-      </router-link></li>
+      </f-link></li>
 
       <li><router-link to="/getting-started">
         <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/getting-started'" />

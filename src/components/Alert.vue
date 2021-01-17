@@ -5,7 +5,7 @@
 
     <div class="d-flex align-items-center">
       <span class="me-3" v-if="icon">
-        <i class="fa-icon" :class="getIcon" style="transform: scale(1.5)" />
+        <i class="fa-icon" :class="getIcon" style="font-size: 1.5em;" />
       </span>
 
       <span>
