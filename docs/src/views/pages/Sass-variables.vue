@@ -11,7 +11,7 @@
       <p>Bootstrap comes included with this framework, Bootstrap comes with it's
         own set of sass variables that fj-vue heavily relies on.</p>
 
-      <f-alert icon="info" class="my-4">
+      <f-alert icon="info-circle" class="my-4">
         Bootstrap comes with many many variables, we have only listed the ones
         that are actually used by the framework.
       </f-alert>

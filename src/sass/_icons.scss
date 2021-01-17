@@ -1,6 +1,8 @@
 $fj-icons-font-family: "fj" !default;
 $fj-icons-font-path: "~fj-vue/src/fonts" !default;
 
+$fj-info: "\e90b";
+$fj-info-circle: "\e90c";
 $fj-arrow-circle-o-right: "\e907";
 $fj-long-arrow-right: "\e908";
 $fj-arrow-circle-right: "\e909";
@@ -40,6 +42,16 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fj-info {
+  &:before {
+    content: $fj-info;
+  }
+}
+.fj-info-circle {
+  &:before {
+    content: $fj-info-circle;
+  }
+}
 .fj-arrow-circle-o-right {
   &:before {
     content: $fj-arrow-circle-o-right;

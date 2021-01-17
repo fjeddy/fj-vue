@@ -4,7 +4,7 @@
     <strong v-if="title">{{ title }}</strong>
 
     <div class="d-flex align-items-center">
-      <span class="me-4" v-if="icon">
+      <span class="me-3" v-if="icon">
         <i class="fa-icon" :class="getIcon" style="transform: scale(1.5)" />
       </span>
 
@@ -46,7 +46,7 @@ export default {
 
     getIcon() {
       if (!this.icon) return
-      return `gg-${this.icon}`
+      return `fj-${this.icon}`
     }
   }
 }
