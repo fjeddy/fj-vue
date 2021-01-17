@@ -45,5 +45,17 @@ module.exports = [
     meta: {
       title: "Alert"
     }
+  },
+
+  {
+    path: '/component/markdown',
+    name: 'Markdown',
+    components: {
+      default: () => import(/* webpackChunkName: "page-component-markdown" */ '@/views/pages/component/Markdown.vue'),
+      sidebar: () => import(/* webpackChunkName: "sidebar-navigation" */ '@/views/sidebars/Navigation.vue')
+    },
+    meta: {
+      title: "Alert"
+    }
   }
 ]

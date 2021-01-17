@@ -22,6 +22,7 @@ import FFormSelect from './components/form/Select'
 
 import FTab from './components/Tab'
 import FTabs from './components/Tabs'
+import FMarkdown from './components/Markdown'
 
 import FList from './components/List'
 
@@ -82,6 +83,7 @@ export {
 
   FTab,
   FTabs,
+  FMarkdown,
 
   FList
 }

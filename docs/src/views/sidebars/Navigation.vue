@@ -54,6 +54,11 @@
         <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/component/tabs'" />
         Tabs
       </router-link></li>
+
+      <li><router-link to="/component/markdown">
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/component/markdown'" />
+        Markdown
+      </router-link></li>
     </ul>
 
     <ul class="list-unstyled">
