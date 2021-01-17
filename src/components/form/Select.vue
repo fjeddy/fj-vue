@@ -1,21 +1,38 @@
 <template>
-  <select
-    @input="$emit('input', $event.target.value)"
-    class="form-select">
-
-    <slot v-if="!options.options" />
-    <option :value="option.value" v-for="option of options.options" v-bind:key="option.value" v-if="options.options">{{ option.title }}</option>
-
+  <select v-model="input">
+    <slot>
+      <option
+        v-if="data"
+        v-for="option of data"
+        v-bind:key="option.value || option"
+        v-bind:value="option.value || option">
+          {{ option.title || option.value || option }}
+      </option>
+    </slot>
   </select>
 </template>
 
 <script>
 export default {
   name: 'FrameworkFormSelect',
+
   props: {
-    options: {
-      type: Object,
+    data: {
+      type: Array,
       required: true
+    },
+
+    value: {}
+  },
+
+  computed: {
+    input: {
+      get() {
+        return this.value
+      },
+      set(val) {
+        this.$emit('input', val)
+      }
     }
   }
 }

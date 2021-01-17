@@ -3,7 +3,7 @@
     <div class="row">
 
       <div class="col-md-3 f-sidebar" v-if="isSidebar">
-        <affix relative-element-selector=".f-sidebar">
+        <affix relative-element-selector=".f-sidebar" :offset="{ top: 40, bottom: 15 }">
           <router-view name="sidebar"></router-view>
         </affix>
       </div>

@@ -9,7 +9,7 @@
     </section>
 
     <section>
-      <f-code :value="code" title="app.vue" />
+      <f-code :value="code" title="app.vue" expand />
     </section>
 
   </div>

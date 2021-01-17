@@ -3,64 +3,77 @@
 
     <ul class="list-unstyled">
       <li><router-link to="/">
-        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/'"></i>
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/'" />
         Overview
       </router-link></li>
 
       <li><router-link to="/getting-started">
-        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/getting-started'"></i>
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/getting-started'" />
         Getting started
       </router-link></li>
 
       <li><router-link to="/sass-variables">
-        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/sass-variables'"></i>
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/sass-variables'" />
         Sass variables
       </router-link></li>
     </ul>
 
     <ul class="list-unstyled">
       <li><router-link to="/app.vue">
-        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/app.vue'"></i>
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/app.vue'" />
         App.vue
       </router-link></li>
 
       <li><router-link to="/router.js">
-        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/router.js'"></i>
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/router.js'" />
         router.js
+      </router-link></li>
+    </ul>
+
+    <h5 class="mt-4">Utilities</h5>
+    <ul class="list-unstyled">
+      <li><router-link to="/utilities/axios">
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/utilities/axios'" />
+        Axios
+      </router-link></li>
+
+      <li><router-link to="/utilities/axios">
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/utilities/axios'" />
+        DayJS
       </router-link></li>
     </ul>
 
     <h5 class="mt-4">Components</h5>
     <ul class="list-unstyled">
       <li><router-link to="/component/list">
-        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/component/list'"></i>
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/component/list'" />
         List
       </router-link></li>
 
       <li><router-link to="/component/tabs">
-        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/component/tabs'"></i>
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/component/tabs'" />
         Tabs
       </router-link></li>
     </ul>
 
     <ul class="list-unstyled">
       <li><router-link to="/component/code">
-        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/component/code'"></i>
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/component/code'" />
         Code
       </router-link></li>
 
       <li><router-link to="/component/pagination">
-        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/component/pagination'"></i>
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/component/pagination'" />
         Pagination
       </router-link></li>
 
       <li><router-link to="/component/alert">
-        <i class="fa-icon gg-chevron-right d-inline-block" v-if="this.$route.path === '/component/alert'"></i>
+        <f-icon icon="long-arrow-right" class="me-2" v-if="this.$route.path === '/component/alert'" />
         Alert
       </router-link></li>
     </ul>
 
-    <ul class="list-unstyled">
+    <ul class="list-unstyled mb-0">
       <li><router-link to="/component/form">
         Form
       </router-link></li>

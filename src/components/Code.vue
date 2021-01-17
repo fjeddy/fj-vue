@@ -1,13 +1,28 @@
 <template>
-  <div class="f-code" ref="codeBlock">
-    <strong v-if="title">{{ title }}</strong>
-    <div class="f-code-content" :class="{ expanded: isExpanded || toSmallForExpansion }" v-on:click="toggleExpansion">
-      <pre :class="languageClass"><code><slot>{{ getCodeSnippet }}</slot></code></pre>
+  <div class="f-code">
+
+    <div class="f-code-title">
+      <strong v-if="title">{{ title }}</strong>
     </div>
+
+    <div class="f-code-content" :class="{ expanded: isExpanded || toSmallForExpansion }" v-on:click="toggleExpansion">
+
+      <div class="f-code-tools">
+        <ul class="list-unstyled list-inline">
+          <li class="list-inline-item"><f-icon icon="copy" /> Copy</li>
+          <li class="list-inline-item">Copying</li>
+        </ul>
+      </div>
+
+      <pre :class="languageClass" ref="codeBlock"><code><slot>{{ getCodeSnippet }}</slot></code></pre>
+
+    </div>
+
   </div>
 </template>
 
 <script>
+import { FIcon } from '../'
 import Prism from 'prism-es6'
 import 'prism-es6/themes/prism-tomorrow.css'
 
@@ -34,6 +49,8 @@ const d_languages = [
 ]
 
 export default {
+  name: 'FrameworkCode',
+
   data: function() {
     return {
       isExpanded: this.expand,
@@ -62,6 +79,10 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+
+  components: {
+    FIcon
   },
 
   mounted() {
@@ -141,48 +162,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@import '../sass/variables.scss';
-
-.f-code {
-  margin: 15px 0;
-}
-
-.f-code .f-code-content {
-  height: 100px;
-  overflow: hidden;
-  border-radius: $f-code-border-radius;
-  position: relative;
-}
-
-.f-code .f-code-content:hover:before {
-  content: 'Click to expand';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  text-align: center;
-  padding-top: 35px;
-}
-
-.f-code .f-code-content.expanded:before {
-  display: none;
-}
-
-.f-code pre {
-  overflow: hidden;
-  border-radius: $f-code-border-radius;
-  font-size: $f-code-font-size;
-  height: 100%;
-  margin: 0;
-}
-
-.f-code .f-code-content.expanded {
-  height: auto;
-  overflow: auto;
-}
-</style>

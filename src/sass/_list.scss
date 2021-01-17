@@ -1,0 +1,38 @@
+.f-list {
+  position: relative;
+}
+
+.f-list .f-list-loading,
+.f-list .f-list-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.f-list .f-list-loading {
+  color: $f-list-loading-color;
+  background-color: $f-list-loading-background;
+}
+
+.f-list .f-list-error {
+  color: $f-list-error-color;
+  background-color: $f-list-error-background;
+}
+
+.f-list .f-list-top {
+  margin-bottom: 4px;
+}
+
+.f-list .f-list-bottom {
+  margin-top: 4px;
+}
+
+.f-list .f-list-items .f-list-item {
+  margin-bottom: 5px;
+}
+
+.f-list .f-list-items .f-list-item:last-child {
+  margin-bottom: 0;
+}

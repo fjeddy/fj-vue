@@ -1,0 +1,56 @@
+.f-code {
+  margin: 15px 0;
+}
+
+.f-code .f-code-content {
+  height: 100px;
+  overflow: hidden;
+  border-radius: $f-code-border-radius;
+  position: relative;
+}
+
+.f-code .f-code-content:hover:before {
+  content: 'Click to expand';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.f-code .f-code-content.expanded:before {
+  display: none;
+}
+
+.f-code .f-code-content pre {
+  overflow: hidden;
+  border-radius: $f-code-border-radius;
+  font-size: $f-code-font-size;
+  height: 100%;
+  margin: 0;
+}
+
+.f-code .f-code-content.expanded {
+  height: auto;
+  overflow-y: auto;
+}
+
+.f-code .f-code-content .f-code-tools {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.f-code .f-code-content .f-code-tools ul {
+  border-top-right-radius: $f-code-border-radius;
+}
+
+.f-code .f-code-content .f-code-tools li {
+  display: inline-block;
+  color: #666;
+  font-size: 0.8em;
+}

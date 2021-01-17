@@ -1,5 +1,10 @@
 import merge from 'lodash/merge'
 
+import Axios from './axios'
+import DayJS from './dayjs'
+
+import FIcon from './components/Icon'
+
 import FContent from './layout/Content'
 import FHeader from './layout/Header'
 import FNavbar from './layout/Navbar'
@@ -49,12 +54,17 @@ export default {
       }
     }
     const options = merge(def_options, app_options)
+
     Vue.prototype.$fj = options
+    Vue.prototype.$axios = Axios
+    Vue.prototype.$dayjs = DayJS
 
   }
 }
 
 export {
+  FIcon,
+
   FContent,
   FHeader,
   FNavbar,

@@ -7,9 +7,9 @@
       and output automatically.</p>
     </section>
 
-    <section class="bg-secondary p-1 rounded">
+    <section>
       <f-list url="http://localhost:2999/v1/packages" :limit="2" v-slot="{ item }">
-        <div class="bg-white p-2 rounded">
+        <div class="bg-dark text-white p-2 rounded">
           {{ item.name }}
         </div>
       </f-list>

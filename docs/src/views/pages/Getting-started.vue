@@ -56,7 +56,7 @@
       custom SASS variables are not overwritten. In <code>App.vue</code> or
       any other file where you want to include the SCSS.</p>
 
-      <f-code :value="codeAppVue" language="scss" />
+      <f-code :value="codeSCSS" language="scss" />
 
       <p>You can find a complete list of all the variables you can use over at
         <router-link to="/sass-variables">Sass variables</router-link>. You
@@ -101,21 +101,21 @@ export default {
   name: "PageIndex",
   data: function() {
     return {
-      codeAppVue: `
+      codeSCSS: `
+        // All Bootstrap and fj-vue variables are inside here
         @import "~fj-vue/src/sass/variables.scss";
 
+        // Override Bootstrap and fj-vue variables AFTER including them
         $body-bg:                   $light;
         $body-color:                $gray-900;
 
         $font-size-base:            1.1rem;
         $line-height-base:          1.6;
 
+        // Include the actual css from fj-vue, using your new variables
         @import "~fj-vue/src/sass/framework.scss";
 
-        /**
-        *** Your custom CSS
-        **/
-
+        // Include your custom css AFTER including fj-vue's CSS
         html,
         body {
           height: 100%;

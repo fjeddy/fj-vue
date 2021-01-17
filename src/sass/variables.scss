@@ -2,5 +2,14 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
+// Code block
 $f-code-font-size:                   .9em;
 $f-code-border-radius:               3px;
+
+// List
+$f-list-loading-background:          rgba(0, 0, 0, 0.5);
+$f-list-loading-color:               #fff;
+$f-list-error-background:            red;
+$f-list-error-color:                 #fff;
+
+$nav-tabs-border-width:             0;
