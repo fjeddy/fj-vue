@@ -28,6 +28,15 @@
     </section>
 
     <section>
+      <f-alert type="warning">All empty newlines will be removed from the beginning
+      and the end of the code.</f-alert>
+
+      <f-alert type="warning">The first line marks the beginning of the document.
+      If you have 8 whitespaces at the very beginning of the first line, then the
+      first 8 whitespaces will be removed from all the lines.</f-alert>
+    </section>
+
+    <section>
       <h2>Props</h2>
       <p>Props you can use to modify the output of the component.</p>
 
