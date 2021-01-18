@@ -15,7 +15,7 @@
   "scripts": {
     "test": "echo \"No test specified\"",
     "build:css": "node-sass src/sass/export.scss dist/fj-vue.min.css --output-style compressed",
-    "build": "bili --format cjs --format umd --format esm --moduleName fj-vue --fileName fj-vue[min].[format].js && npm run build:css"
+    "build": "bili --format cjs --moduleName fj-vue --fileName fj-vue[min].[format].js && npm run build:css"
   },
   "files": [
     "/src",
