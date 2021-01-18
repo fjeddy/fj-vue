@@ -18,14 +18,16 @@
 
     <div class="f-list-items">
       <div class="f-list-item" v-for="l of items.list">
-        <slot v-bind:item="l">
-
-        </slot>
+        <slot v-bind:item="l"></slot>
       </div>
     </div>
 
+    <div class="f-list-empty" v-if="items.list.length === 0">
+      List is empty buddy
+    </div>
+
     <div class="f-list-bottom d-flex align-items-center" v-if="isBottomVisible">
-      <span class="flex-fill" v-html="getViewingString"></span>
+      <span class="flex-fill" v-html="getViewingString" v-if="isTotalVisible"></span>
       <f-pagination :options="listOptions.page" v-model="userOptions.page" v-if="isPaginationVisible" />
     </div>
 
@@ -132,18 +134,19 @@ export default {
     getViewingString() {
       return this.$fj.language.listViewing
         .replaceAll('%limit', `<strong>${this.items.list.length}</strong>`)
-        .replaceAll('%total',`<strong>${this.items.total}</strong>`)
+        .replaceAll('%total',`<strong>${this.items.total || 0}</strong>`)
     },
 
     isTopVisible() {
       if (this.isOrderVisible) return true
       if (this.isPaginationVisible) return true
-
       return false
     },
 
     isBottomVisible() {
-      return true
+      if (this.isPaginationVisible) return true
+      if (this.isTotalVisible) return true
+      return false
     },
 
     isErrorVisible() {
@@ -157,21 +160,25 @@ export default {
     },
 
     isPaginationVisible() {
+      if (this.items.list.length === 0) return false
       if (this.listOptions.page.total > 1) return true
       return false
     },
 
     isOrderVisible() {
+      if (this.items.list.length === 0) return false
       if (this.listOptions.order.options) return true
       return false
     },
 
     isLimitVisible() {
+      if (this.items.list.length === 0) return false
       if (this.listOptions.limit.options) return true
       return false
     },
 
     isTotalVisible() {
+      if (this.items.list.length === 0) return false
       return false
     },
 
