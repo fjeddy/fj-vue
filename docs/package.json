@@ -1,6 +1,7 @@
 {
   "name": "fj-vue-example",
   "version": "0.0.7",
+  "sideEffects": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

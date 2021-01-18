@@ -2,7 +2,6 @@
   <nav class="f-navbar navbar navbar-expand-lg" :class="classes">
     <slot />
   </nav>
-</nav>
 </template>
 
 <script>

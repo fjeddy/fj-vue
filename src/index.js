@@ -3,28 +3,28 @@ import merge from 'lodash/merge'
 import Axios from './axios'
 import DayJS from './dayjs'
 
-import FIcon from './components/Icon'
+import FIcon from './components/Icon.vue'
 
-import FContent from './layout/Content'
-import FHeader from './layout/Header'
-import FNavbar from './layout/Navbar'
-import FFooter from './layout/Footer'
+import FContent from './layout/Content.vue'
+import FHeader from './layout/Header.vue'
+import FNavbar from './layout/Navbar.vue'
+import FFooter from './layout/Footer.vue'
 
-import FLink from './components/Link'
-import FButton from './components/Button'
-import FPagination from './components/Pagination'
-import FCode from './components/Code'
-import FAlert from './components/Alert'
+import FLink from './components/Link.vue'
+import FButton from './components/Button.vue'
+import FPagination from './components/Pagination.vue'
+import FCode from './components/Code.vue'
+import FAlert from './components/Alert.vue'
 
-import FLoading from './components/Loading'
+import FLoading from './components/Loading.vue'
 
-import FFormSelect from './components/form/Select'
+import FFormSelect from './components/form/Select.vue'
 
-import FTab from './components/Tab'
-import FTabs from './components/Tabs'
-import FMarkdown from './components/Markdown'
+import FTab from './components/Tab.vue'
+import FTabs from './components/Tabs.vue'
+import FMarkdown from './components/Markdown.vue'
 
-import FList from './components/List'
+import FList from './components/List.vue'
 
 export default {
   install(Vue, app_options) {

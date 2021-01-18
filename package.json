@@ -1,30 +1,44 @@
 {
   "name": "fj-vue",
+  "description": "A Vue.JS framework aiming towards JSON Rest API's.",
   "version": "0.0.15",
-  "main": "src/index.js",
-  "sideEffects": false,
-  "scripts": {
-    "test": "echo \"No test specified\""
-  },
-  "files": [
-    "/src"
-  ],
+  "keywords": "vuejs vue vue.js api rest json",
   "author": {
     "name": "Freddy Lundekvam",
     "url": "https://www.fjeddy.com/"
   },
-  "description": "A Vue.JS framework aiming towards JSON Rest API's.",
-  "keywords": "vuejs vue vue.js api rest json",
   "homepage": "https://fj-vue.fjeddy.com/",
   "bugs": "https://github.com/fjeddy/fj-vue/issues",
+  "license": "MIT",
+  "main": "dist/fj-vue.cjs.js",
+  "module": "dist/fj-vue.esm.js",
+  "scripts": {
+    "test": "echo \"No test specified\"",
+    "build:css": "node-sass src/sass/export.scss dist/fj-vue.min.css --output-style compressed",
+    "build": "bili --format cjs --format umd --format esm --moduleName fj-vue --fileName fj-vue[min].[format].js && npm run build:css"
+  },
+  "files": [
+    "/src",
+    "/dist"
+  ],
   "dependencies": {
+    "bootstrap": "^5.0.0-beta1",
     "axios": "^0.21.1",
     "axios-retry": "^3.1.9",
-    "bootstrap": "^5.0.0-beta1",
     "lodash": "^4.17.20",
     "markdown-it": "^12.0.4",
     "prism-es6": "^1.2.0",
     "vue-affix": "^0.5.2"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.5",
+    "babel-preset-vue-app": "^2.0.0",
+    "bili": "^5.0.5",
+    "bootstrap": "^5.0.0-beta1",
+    "node-sass": "^5.0.0",
+    "rollup-plugin-vue": "^5.0.0",
+    "sass-loader": "^10.1.1",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
+  }
 }
