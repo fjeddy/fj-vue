@@ -11,7 +11,7 @@
   "bugs": "https://github.com/fjeddy/fj-vue/issues",
   "license": "MIT",
   "main": "dist/fj-vue.cjs.js",
-  "module": "dist/fj-vue.esm.js",
+  "module": "src/index.js",
   "scripts": {
     "test": "echo \"No test specified\"",
     "build:css": "node-sass src/sass/export.scss dist/fj-vue.min.css --output-style compressed",
